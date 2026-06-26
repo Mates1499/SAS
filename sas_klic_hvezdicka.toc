@@ -1,9 +1,9 @@
 \babel@toc {czech}{}\relax 
 \contentsline {section}{\numberline {1}Klasifikace signálů ve spojitém a diskrétním čase}{2}{section.1}%
 \contentsline {section}{\numberline {2}Spektrální reprezentace, korelace, Fourierovy transformace}{4}{section.2}%
-\contentsline {section}{\numberline {3}Vzorkování a interpolace}{7}{section.3}%
-\contentsline {section}{\numberline {4}Klasifikace soustav, LTI, konvoluce, stabilita}{8}{section.4}%
-\contentsline {section}{\numberline {5}Pásmové signály, komplexní obálka, Hilbertova transformace}{11}{section.5}%
-\contentsline {section}{\numberline {6}Analogové modulace}{13}{section.6}%
-\contentsline {section}{\numberline {7}Náhodné procesy, stacionarita, ergodicita, bílý šum}{15}{section.7}%
-\contentsline {section}{Rychlý přehled – seznam klíčových otázek}{17}{section.7}%
+\contentsline {section}{\numberline {3}Vzorkování a interpolace}{9}{section.3}%
+\contentsline {section}{\numberline {4}Klasifikace soustav, LTI, konvoluce, stabilita}{11}{section.4}%
+\contentsline {section}{\numberline {5}Pásmové signály, komplexní obálka, Hilbertova transformace}{16}{section.5}%
+\contentsline {section}{\numberline {6}Analogové modulace}{18}{section.6}%
+\contentsline {section}{\numberline {7}Náhodné procesy, stacionarita, ergodicita, bílý šum}{20}{section.7}%
+\contentsline {section}{Rychlý přehled – seznam}{23}{section.7}%
