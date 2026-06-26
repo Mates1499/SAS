@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.26)  26 JUN 2026 08:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.26)  26 JUN 2026 09:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -838,6 +838,8 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \c@mdf@zref@counter=\count323
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.2.0'
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
@@ -889,206 +891,6 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 zlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
-(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
-Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
-\t@pgfplots@toka=\toks49
-\t@pgfplots@tokb=\toks50
-\t@pgfplots@tokc=\toks51
-\pgfplots@tmpa=\dimen303
-\c@pgfplots@coordindex=\count333
-\c@pgfplots@scanlineindex=\count334
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
-.tex))
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.t
-ex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
-gfsupp_loader.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
-)
-Package pgfplots: loading complementary utilities for your pgf version...
-\t@pgf@toka=\toks52
-\t@pgf@tokb=\toks53
-\t@pgf@tokc=\toks54
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
-gfsupp_pgfutil-common-lists.tex))
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
-tructure.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
-tructureext.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
-.code.tex
-\c@pgfplotsarray@tmp=\count335
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
-x.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
-d.code.tex
-\c@pgfplotstable@counta=\count336
-\t@pgfplotstable@a=\toks55
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
-.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.te
-x
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.co
-de.tex))
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code
-.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
-fshading.code.tex
-\c@pgfplotslibrarysurf@no=\count337
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
-shading.pgfsys-pdftex.def)))
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.
-tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
-))
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.t
-ex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.t
-ex
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.cod
-e.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.
-tex)))
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.cod
-e.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex
-) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex
-) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarydecorations.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
-e.tex
-\pgfdecoratedcompleteddistance=\dimen304
-\pgfdecoratedremainingdistance=\dimen305
-\pgfdecoratedinputsegmentcompleteddistance=\dimen306
-\pgfdecoratedinputsegmentremainingdistance=\dimen307
-\pgf@decorate@distancetomove=\dimen308
-\pgf@decorate@repeatstate=\count338
-\pgfdecorationsegmentamplitude=\dimen309
-\pgfdecorationsegmentlength=\dimen310
-)
-\tikz@lib@dec@box=\box84
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarydecorations.pathmorphing.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
-decorations.pathmorphing.code.tex))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarydecorations.pathreplacing.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
-decorations.pathreplacing.code.tex))
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.co
-ntourlua.code.tex)
-\pgfplots@numplots=\count339
-\pgfplots@xmin@reg=\dimen311
-\pgfplots@xmax@reg=\dimen312
-\pgfplots@ymin@reg=\dimen313
-\pgfplots@ymax@reg=\dimen314
-\pgfplots@zmin@reg=\dimen315
-\pgfplots@zmax@reg=\dimen316
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryplotmarks.code.tex
-File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
-de.tex
-File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.
-code.tex
-File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowinset=\dimen317
-\pgfarrowlength=\dimen318
-\pgfarrowwidth=\dimen319
-\pgfarrowlinewidth=\dimen320
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarypositioning.code.tex
-File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryshapes.code.tex
-File: tikzlibraryshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryshapes.geometric.code.tex
-File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
-s.geometric.code.tex
-File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryshapes.misc.code.tex
-File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
-s.misc.code.tex
-File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryshapes.symbols.code.tex
-File: tikzlibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
-s.symbols.code.tex
-File: pgflibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryshapes.arrows.code.tex
-File: tikzlibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
-s.arrows.code.tex
-File: pgflibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryshapes.callouts.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
-s.callouts.code.tex))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryshapes.multipart.code.tex
-File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
-s.multipart.code.tex
-File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodepartlowerbox=\box85
-\pgfnodeparttwobox=\box86
-\pgfnodepartthreebox=\box87
-\pgfnodepartfourbox=\box88
-\pgfnodeparttwentybox=\box89
-\pgfnodepartnineteenbox=\box90
-\pgfnodeparteighteenbox=\box91
-\pgfnodepartseventeenbox=\box92
-\pgfnodepartsixteenbox=\box93
-\pgfnodepartfifteenbox=\box94
-\pgfnodepartfourteenbox=\box95
-\pgfnodepartthirteenbox=\box96
-\pgfnodeparttwelvebox=\box97
-\pgfnodepartelevenbox=\box98
-\pgfnodeparttenbox=\box99
-\pgfnodepartninebox=\box100
-\pgfnodeparteightbox=\box101
-\pgfnodepartsevenbox=\box102
-\pgfnodepartsixbox=\box103
-\pgfnodepartfivebox=\box104
-)))
-(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
-Library (tcolorbox): 'tcbskins.code.tex' version '6.2.0'
 (/usr/share/texlive/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
 Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
 
@@ -1098,7 +900,7 @@ Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
 (/usr/share/texlive/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.te
 x
 File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
-\l__tikzfill_img_box=\box105
+\l__tikzfill_img_box=\box84
 )) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.2.0'
 )) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
@@ -1107,37 +909,37 @@ Library (tcolorbox): 'tcbbreakable.code.tex' version '6.2.0'
 Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
 )
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box106
-\tcb@totalupperbox=\box107
-\tcb@totallowerbox=\box108
+\tcb@testbox=\box85
+\tcb@totalupperbox=\box86
+\tcb@totallowerbox=\box87
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 115.
+Package hyperref Info: Option `colorlinks' set `true' on input line 113.
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
-8.
+6.
 
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (./sas_zkouska_priprava.aux)
 \openout1 = `sas_zkouska_priprava.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1155,8 +957,8 @@ LaTeX Font Info:    ... okay on input line 118.
 * \textheight=702.78308pt
 * \oddsidemargin=-1.1381pt
 * \evensidemargin=-1.1381pt
-* \topmargin=-38.1381pt
-* \headheight=12.0pt
+* \topmargin=-54.1381pt
+* \headheight=28.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
 * \footskip=30.0pt
@@ -1175,17 +977,17 @@ LaTeX Font Info:    ... okay on input line 118.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count340
-\scratchdimen=\dimen321
-\scratchbox=\box109
-\nofMPsegments=\count341
-\nofMParguments=\count342
-\everyMPshowfont=\toks56
-\MPscratchCnt=\count343
-\MPscratchDim=\dimen322
-\MPnumerator=\count344
-\makeMPintoPDFobject=\count345
-\everyMPtoPDFconversion=\toks57
+\scratchcounter=\count333
+\scratchdimen=\dimen303
+\scratchbox=\box88
+\nofMPsegments=\count334
+\nofMParguments=\count335
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count336
+\MPscratchDim=\dimen304
+\MPnumerator=\count337
+\makeMPintoPDFobject=\count338
+\everyMPtoPDFconversion=\toks50
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1195,63 +997,60 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 118.
+Package hyperref Info: Link coloring ON on input line 116.
 
 (./sas_zkouska_priprava.out) (./sas_zkouska_priprava.out)
 \@outlinefile=\write4
 \openout4 = `sas_zkouska_priprava.out'.
 
-
-Package pgfplots notification 'compat/show suggested version=true': document ha
-s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
-
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-27.
+25.
+
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-27.
+25.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-127.
+125.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-127.
+125.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 127.
+(Font)              <14.4> on input line 125.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 127.
+(Font)              <10> on input line 125.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 127.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 127
+(Font)              <7> on input line 125.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 125
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 127
+LaTeX Font Info:    Trying to load font information for U+msb on input line 125
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 130.
+(Font)              <12> on input line 129.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 130.
+(Font)              <8> on input line 129.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 130.
+(Font)              <6> on input line 129.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
@@ -1260,291 +1059,183 @@ dvips/lm/lm-ec.enc}] (./sas_zkouska_priprava.toc)
 \openout5 = `sas_zkouska_priprava.toc'.
 
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.139 \newpage
+l.138 \newpage
                [1]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-53.
+51.
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (0.68422pt too wide) in paragraph at lines 187--196
+Overfull \hbox (0.68422pt too wide) in paragraph at lines 186--196
+ [] 
+ []
+
+[2{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/shar
+e/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}] [3{/usr/share/texmf/fonts/enc/dvips/
+lm/lm-mathex.enc}]
+Overfull \hbox (9.17378pt too wide) detected at line 275
+\OML/lmm/m/it/12 ^^N\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 t\OT1/lmr/m/n/12 ) = []1(
+\OML/lmm/m/it/12 t\OT1/lmr/m/n/12 ) \OML/lmm/m/it/12 ^^N\OT1/lmr/m/n/12 (\OML/l
+mm/m/it/12 t\OT1/lmr/m/n/12 ) = [] [] []  []  \OML/lmm/m/it/12 ^^N\OT1/lmr/m/n/
+12 (\OML/lmm/m/it/12 t\OT1/lmr/m/n/12 ) = 0 [] \OML/lmm/m/it/12 t \OMS/lmsy/m/n
+/12 6\OT1/lmr/m/n/12 = 0\OML/lmm/m/it/12 ;  [][] ^^N\OT1/lmr/m/n/12 (\OML/lmm/m
+/it/12 t\OT1/lmr/m/n/12 ) d\OML/lmm/m/it/12 t \OT1/lmr/m/n/12 = 1\OML/lmm/m/it/
+12 :
+ []
+
+[4] [5] [6] [7] [8]
+Overfull \hbox (63.7239pt too wide) detected at line 544
+\OML/lmm/m/it/12 S\OT1/lmr/m/n/12 (\OMS/lmsy/m/n/12 ^^@\OML/lmm/m/it/12 !\OT1/l
+mr/m/n/12 ) = \OML/lmm/m/it/12 S[]\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 !\OT1/lmr/m
+/n/12 )  \OMS/lmsy/m/n/12 )  j\OML/lmm/m/it/12 S\OT1/lmr/m/n/12 (\OML/lmm/m/it/
+12 !\OT1/lmr/m/n/12 )\OMS/lmsy/m/n/12 j \OT1/lmr/m/n/12 = \OMS/lmsy/m/n/12 j\OM
+L/lmm/m/it/12 S\OT1/lmr/m/n/12 (\OMS/lmsy/m/n/12 ^^@\OML/lmm/m/it/12 !\OT1/lmr/
+m/n/12 )\OMS/lmsy/m/n/12 j []\OML/lmm/m/it/12 ;  [] S\OT1/lmr/m/n/12 (\OML/lmm/
+m/it/12 !\OT1/lmr/m/n/12 ) = \OMS/lmsy/m/n/12 ^^@ [] \OML/lmm/m/it/12 S\OT1/lmr
+/m/n/12 (\OMS/lmsy/m/n/12 ^^@\OML/lmm/m/it/12 !\OT1/lmr/m/n/12 ) []
+ []
+
+[9]
+Overfull \hbox (147.74434pt too wide) in paragraph at lines 606--617
+ [] 
+ []
+
+[10] [11] [12] [13]
+Overfull \hbox (6.80882pt too wide) in paragraph at lines 766--777
  [] 
  []
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.7595pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.7595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-15.7595pt}.
-
-[2{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/shar
-e/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}]
-Overfull \hbox (8.6769pt too wide) in paragraph at lines 202--203
-[]\T1/lmr/bx/n/12 Kauzální sig-nál\T1/lmr/m/n/12 : $\OML/lmm/m/it/12 s\OT1/lmr/
-m/n/12 (\OML/lmm/m/it/12 t\OT1/lmr/m/n/12 ) = 0$ \T1/lmr/m/n/12 pro $\OML/lmm/m
-/it/12 t < \OT1/lmr/m/n/12 0$\T1/lmr/m/n/12 . Má de-fi-no-vaný za-£á-tek ^^U ^^
-Rp°í-£in-nost"(kauzalita). 
+Overfull \hbox (13.72687pt too wide) in paragraph at lines 781--782
+[] []\T1/lmr/bx/n/12 BIBO sta-bi-lita.[] Bounded-Input Bounded-Output\T1/lmr/m/
+n/12 : pro kaºdý ome-zený vstup ($\OMS/lmsy/m/n/12 j\OML/lmm/m/it/12 x\OT1/lmr/
+m/n/12 (\OML/lmm/m/it/12 t\OT1/lmr/m/n/12 )\OMS/lmsy/m/n/12 j ^^T
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.7595pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.7595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-15.7595pt}.
-
-[3{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.7595pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.7595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-15.7595pt}.
-
-[4]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.7595pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.7595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-15.7595pt}.
-
-[5]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.7595pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.7595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-15.7595pt}.
-
-[6]
-Overfull \hbox (133.441pt too wide) detected at line 490
-\OMS/lmsy/m/n/12 j\OML/lmm/m/it/12 S\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 !\OT1/lmr
-/m/n/12 )\OMS/lmsy/m/n/12 j \OT1/lmr/m/n/12 = \OMS/lmsy/m/n/12 j\OML/lmm/m/it/1
-2 S\OT1/lmr/m/n/12 (\OMS/lmsy/m/n/12 ^^@\OML/lmm/m/it/12 !\OT1/lmr/m/n/12 )\OMS
-/lmsy/m/n/12 j []  [] \OML/lmm/m/it/12 S\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 !\OT1
-/lmr/m/n/12 ) = \OMS/lmsy/m/n/12 ^^@ [] \OML/lmm/m/it/12 S\OT1/lmr/m/n/12 (\OMS
-/lmsy/m/n/12 ^^@\OML/lmm/m/it/12 !\OT1/lmr/m/n/12 ) []
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.7595pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.7595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-15.7595pt}.
-
-[7]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.7595pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.7595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-15.7595pt}.
-
-[8]
-Overfull \hbox (19.0072pt too wide) in paragraph at lines 588--589
-[]\T1/lmr/bx/n/12 FFT\T1/lmr/m/n/12 : efek-tivní al-go-rit-mus vý-po-£tu DFT, s
-ni-ºuje po-£et ope-rací z $\OML/lmm/m/it/12 O\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 
-N[]\OT1/lmr/m/n/12 )$ \T1/lmr/m/n/12 na $\OML/lmm/m/it/12 O\OT1/lmr/m/n/12 (\OM
-L/lmm/m/it/12 N [][] N\OT1/lmr/m/n/12 )$\T1/lmr/m/n/12 . 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.7595pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.7595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-15.7595pt}.
-
-[9]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.1595pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.1595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.1595pt}.
-
-[10]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.1595pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.1595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.1595pt}.
-
-[11]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[12]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[13]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[14]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[15]
-Overfull \hbox (16.51831pt too wide) in paragraph at lines 855--855
+[14] [15] [16] [17]
+Overfull \hbox (16.51831pt too wide) in paragraph at lines 941--941
 |\T1/lmr/bx/n/17.28 5. Pásmové sig-nály, kom-plexní obálka, Hil-ber-tova trans-
 
  []
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.1595pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.1595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.1595pt}.
-
-[16]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.1595pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.1595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.1595pt}.
-
-[17]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.1595pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.1595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.1595pt}.
+Overfull \hbox (37.69458pt too wide) detected at line 1003
+[]\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 t\OT1/lmr/m/n/12 ) = \OML/lmm/m/it/12 a\OT1
+/lmr/m/n/12 (\OML/lmm/m/it/12 t\OT1/lmr/m/n/12 ) + \OML/lmm/m/it/12 j c\OT1/lmr
+/m/n/12 (\OML/lmm/m/it/12 t\OT1/lmr/m/n/12 ) \OML/lmm/m/it/12 a\OT1/lmr/m/n/12 
+(\OML/lmm/m/it/12 t\OT1/lmr/m/n/12 ) = []\OMS/lmsy/m/n/12 f[]\OT1/lmr/m/n/12 (\
+OML/lmm/m/it/12 t\OT1/lmr/m/n/12 )\OMS/lmsy/m/n/12 g[] \OML/lmm/m/it/12 c\OT1/l
+mr/m/n/12 (\OML/lmm/m/it/12 t\OT1/lmr/m/n/12 ) = []\OMS/lmsy/m/n/12 f[]\OT1/lmr
+/m/n/12 (\OML/lmm/m/it/12 t\OT1/lmr/m/n/12 )\OMS/lmsy/m/n/12 g[]
+ []
 
 [18]
+Overfull \hbox (8.1869pt too wide) detected at line 1036
+[]\OML/lmm/m/it/12 h\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 t\OT1/lmr/m/n/12 ) = [] [
+][](\OML/lmm/m/it/12 t\OT1/lmr/m/n/12 ) = \OMS/lmsy/m/n/12 Hf\OML/lmm/m/it/12 s
+\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 t\OT1/lmr/m/n/12 )\OMS/lmsy/m/n/12 g \OT1/lmr
+/m/n/12 = \OML/lmm/m/it/12 s\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 t\OT1/lmr/m/n/12 
+) \OMS/lmsy/m/n/12 ^^C []
+ []
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.1595pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.1595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
+[19] [20]
+Overfull \hbox (84.12688pt too wide) in paragraph at lines 1112--1121
+ [] 
+ []
 
-(fancyhdr)                \addtolength{\topmargin}{-2.1595pt}.
+[21] [22] [23] [24] [25]
+Overfull \hbox (6.42789pt too wide) in paragraph at lines 1371--1381
+ [] 
+ []
 
-[19]
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 1395--1396
+\T1/lmr/m/n/12 (Fourierova
+ []
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.1595pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.1595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-2.1595pt}.
+Underfull \hbox (badness 10000) in paragraph at lines 1400--1401
+\T1/lmr/m/n/12 (Diskrétní
+ []
 
-[20]
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.1595pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.1595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
+Underfull \hbox (badness 10000) in paragraph at lines 1403--1404
+[]|$\OML/lmm/m/it/12 C\OT1/lmr/m/n/12 [\OML/lmm/m/it/12 n\OT1/lmr/m/n/12 ] =
+ []
 
-(fancyhdr)                \addtolength{\topmargin}{-2.1595pt}.
 
-[21]
+Underfull \hbox (badness 10000) in paragraph at lines 1404--1405
+[]|$\OML/lmm/m/it/12 s\OT1/lmr/m/n/12 [\OML/lmm/m/it/12 k\OT1/lmr/m/n/12 ] =
+ []
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.7595pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.7595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-15.7595pt}.
+Overfull \hbox (16.27449pt too wide) in paragraph at lines 1404--1405
+[] [] \OML/lmm/m/it/12 C\OT1/lmr/m/n/12 [\OML/lmm/m/it/12 n\OT1/lmr/m/n/12 ]\OM
+L/lmm/m/it/12 e[]$| 
+ []
 
-[22]
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.7595pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.7595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
+Underfull \hbox (badness 10000) in paragraph at lines 1405--1406
+\T1/lmr/m/n/12 (Fourierova
+ []
 
-(fancyhdr)                \addtolength{\topmargin}{-15.7595pt}.
 
-[23]
+Underfull \hbox (badness 10000) in paragraph at lines 1409--1410
+[]|$\OML/lmm/m/it/12 s\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 t\OT1/lmr/m/n/12 ) =
+ []
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.7595pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.7595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-15.7595pt}.
+Underfull \hbox (badness 10000) in paragraph at lines 1410--1411
+\T1/lmr/m/n/12 (Diskrétní
+ []
 
-[24]
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.7595pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.7595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
+Underfull \hbox (badness 10000) in paragraph at lines 1414--1415
+[]|$\OML/lmm/m/it/12 s\OT1/lmr/m/n/12 [\OML/lmm/m/it/12 k\OT1/lmr/m/n/12 ] =
+ []
 
-(fancyhdr)                \addtolength{\topmargin}{-15.7595pt}.
 
-[25] (./sas_zkouska_priprava.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 1415--1416
+\T1/lmr/m/n/12 (Diskrétní
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1420
+[]|$\OML/lmm/m/it/12 d\OT1/lmr/m/n/12 [\OML/lmm/m/it/12 k\OT1/lmr/m/n/12 ] =
+ []
+
+
+Overfull \hbox (14.29272pt too wide) in paragraph at lines 1419--1420
+[] [] \OML/lmm/m/it/12 D\OT1/lmr/m/n/12 [\OML/lmm/m/it/12 n\OT1/lmr/m/n/12 ]\OM
+L/lmm/m/it/12 e[]$| 
+ []
+
+
+Overfull \hbox (71.38106pt too wide) in paragraph at lines 1391--1423
+[][] 
+ []
+
+[27] [28] (./sas_zkouska_priprava.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `sas_zkouska_priprava.out' has not changed.
-(rerunfilecheck)             Checksum: 7A052219C8F9AC1D67819438A1887AF1;2685.
+(rerunfilecheck)             Checksum: 7D177BA38A79A135FC78FAB8080810CB;2950.
  ) 
 Here is how much of TeX's memory you used:
- 40529 strings out of 475350
- 953254 string characters out of 5770204
- 1940975 words of memory out of 5000000
- 61868 multiletter control sequences out of 15000+600000
- 640198 words of font info for 93 fonts, out of 8000000 for 9000
+ 28389 strings out of 475350
+ 551210 string characters out of 5770204
+ 1944975 words of memory out of 5000000
+ 49915 multiletter control sequences out of 15000+600000
+ 639822 words of font info for 92 fonts, out of 8000000 for 9000
  428 hyphenation exceptions out of 8191
- 83i,14n,93p,741b,1012s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,14n,93p,557b,1002s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/p
@@ -1556,10 +1247,10 @@ b></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb>
-Output written on sas_zkouska_priprava.pdf (26 pages, 327859 bytes).
+Output written on sas_zkouska_priprava.pdf (29 pages, 352508 bytes).
 PDF statistics:
- 294 PDF objects out of 1000 (max. 8388607)
- 229 compressed objects within 3 object streams
- 59 named destinations out of 1000 (max. 500000)
- 77 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 301 PDF objects out of 1000 (max. 8388607)
+ 234 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

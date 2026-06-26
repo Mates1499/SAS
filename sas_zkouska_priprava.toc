@@ -1,9 +1,10 @@
 \babel@toc {czech}{}\relax 
 \contentsline {section}{\numberline {1}Klasifikace signálů ve spojitém a diskrétním čase, speciální signály}{2}{section.1}%
-\contentsline {section}{\numberline {2}Časová a spektrální reprezentace signálů, korelace, základní teorémy}{5}{section.2}%
-\contentsline {section}{\numberline {3}Vzorkování a interpolace signálu}{10}{section.3}%
-\contentsline {section}{\numberline {4}Klasifikace soustav, LTI soustavy, konvoluce, stabilita}{12}{section.4}%
-\contentsline {section}{\numberline {5}Pásmové signály, komplexní obálka, Hilbertova transformace}{16}{section.5}%
-\contentsline {section}{\numberline {6}Typy základních analogových modulací}{19}{section.6}%
-\contentsline {section}{\numberline {7}Základní charakteristiky náhodného procesu, stacionarita, ergodicita, bílý šum}{22}{section.7}%
-\contentsline {section}{Přehled klíčových vzorců}{25}{section.7}%
+\contentsline {section}{\numberline {2}Časová a spektrální reprezentace signálů, korelace, základní teorémy}{6}{section.2}%
+\contentsline {section}{\numberline {3}Vzorkování a interpolace signálu}{12}{section.3}%
+\contentsline {section}{\numberline {4}Klasifikace soustav, LTI soustavy, konvoluce, stabilita}{14}{section.4}%
+\contentsline {section}{\numberline {5}Pásmové signály, komplexní obálka, Hilbertova transformace}{18}{section.5}%
+\contentsline {section}{\numberline {6}Typy základních analogových modulací}{21}{section.6}%
+\contentsline {section}{\numberline {7}Základní charakteristiky náhodného procesu, stacionarita, ergodicita, bílý šum}{24}{section.7}%
+\contentsline {section}{Rychlý přehled – Fourierovská zobrazení}{27}{section.7}%
+\contentsline {section}{Přehled klíčových vzorců}{27}{section.7}%
