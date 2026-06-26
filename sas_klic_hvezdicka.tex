@@ -1,5 +1,5 @@
 % ============================================================
-%  SAS – Klíčové otázky označené * (hvězdičkou)
+%  SAS – Klíčové otázky (*) – styl Q&A
 %  B2B37SAS – jejich neznalost může vést k F
 % ============================================================
 \documentclass[12pt,a4paper]{article}
@@ -8,7 +8,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[czech]{babel}
 \usepackage{lmodern}
-\usepackage{amsmath,amssymb,amsthm}
+\usepackage{amsmath,amssymb}
 \usepackage{mathtools}
 \usepackage{geometry}
 \usepackage{xcolor}
@@ -19,86 +19,108 @@
 \usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
+\usepackage{parskip}
 
-\geometry{
-  top=2.5cm, bottom=2.5cm,
-  left=2.5cm, right=2.5cm,
-  headheight=28pt
-}
+\geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,headheight=28pt}
 
-% ---------- Barvy ----------
-\definecolor{hvezdicka}{RGB}{180,0,0}
-\definecolor{pozadihv}{RGB}{255,240,240}
-\definecolor{pozadiinfo}{RGB}{235,245,255}
-\definecolor{pozadimat}{RGB}{240,255,240}
-\definecolor{pozadinote}{RGB}{255,253,220}
-\definecolor{hlavicka}{RGB}{30,60,120}
+% ---- Barvy ----
+\definecolor{cervena}{RGB}{180,0,0}
+\definecolor{tmavemodr}{RGB}{30,60,120}
+\definecolor{bgotazka}{RGB}{220,30,30}
+\definecolor{bgodpoved}{RGB}{248,252,255}
+\definecolor{bgmat}{RGB}{240,255,240}
+\definecolor{bgnote}{RGB}{255,253,220}
+\definecolor{bginfo}{RGB}{235,245,255}
 
-% ---------- tcolorbox styly ----------
 \tcbuselibrary{skins,breakable}
 
-\newtcolorbox{otazkaBox}[1][]{
+% Červený box pro otázku
+\newtcolorbox{Otazka}[1]{
   breakable,
-  colback=pozadihv,
-  colframe=hvezdicka,
-  fonttitle=\bfseries\color{white},
-  coltitle=white,
-  
-  
-  title={$\bigstar$ #1},
-  #1
+  colback=cervena!90!black,
+  colframe=cervena!70!black,
+  colupper=white,
+  fontupper=\bfseries\large,
+  left=8pt, right=8pt, top=6pt, bottom=6pt,
+  sharp corners=south,
+  title={},
+  label={#1}
 }
 
-\newtcolorbox{matBox}[1][]{
+% Světlý box pro odpověď
+\newtcolorbox{Odpoved}{
   breakable,
-  colback=pozadimat,
-  colframe=green!60!black,
-  fonttitle=\bfseries,
-  title={#1}
+  colback=bgodpoved,
+  colframe=tmavemodr!40,
+  left=8pt, right=8pt, top=8pt, bottom=8pt,
+  sharp corners=north,
 }
 
-\newtcolorbox{infoBox}[1][]{
+% Zelený box pro vzorce
+\newtcolorbox{Vzorec}[1][]{
   breakable,
-  colback=pozadiinfo,
-  colframe=hlavicka!70,
-  fonttitle=\bfseries,
-  title={#1}
+  colback=bgmat,
+  colframe=green!55!black,
+  fonttitle=\bfseries\small,
+  title={#1},
+  left=6pt, right=6pt, top=4pt, bottom=4pt,
 }
 
-\newtcolorbox{noteBox}[1][]{
+% Žlutý box pro poznámky
+\newtcolorbox{Poznamka}[1][Poznámka]{
   breakable,
-  colback=pozadinote,
-  colframe=orange!70!black,
-  fonttitle=\bfseries,
-  title={#1}
+  colback=bgnote,
+  colframe=orange!65!black,
+  fonttitle=\bfseries\small,
+  title={#1},
+  left=6pt, right=6pt, top=4pt, bottom=4pt,
 }
 
-% ---------- Záhlaví / zápatí ----------
+% Modrý box pro definice / doplnění
+\newtcolorbox{Info}[1][]{
+  breakable,
+  colback=bginfo,
+  colframe=tmavemodr!55,
+  fonttitle=\bfseries\small,
+  title={#1},
+  left=6pt, right=6pt, top=4pt, bottom=4pt,
+}
+
+% ---- Záhlaví ----
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\small\textcolor{hlavicka}{\textbf{B2B37SAS} – Klíčové otázky $\bigstar$}}
-\fancyhead[R]{\small\textcolor{hlavicka}{\leftmark}}
-\fancyfoot[C]{\thepage}
+\fancyhead[L]{\small\textcolor{tmavemodr}{\textbf{B2B37SAS} – Klíčové otázky $\bigstar$}}
+\fancyhead[R]{\small\textcolor{tmavemodr}{\leftmark}}
+\fancyfoot[C]{\small\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 
-% ---------- Titulky sekcí ----------
+% ---- Sekce ----
 \titleformat{\section}[block]
-  {\large\bfseries\color{hlavicka}}
-  {\thesection.}{0.6em}{}[\titlerule]
+  {\large\bfseries\color{tmavemodr}}{\thesection.}{0.6em}{}[\titlerule]
 
-% ---------- Zkratky ----------
+% ---- Zkratky ----
 \newcommand{\FT}{\mathcal{F}}
 \newcommand{\LT}{\mathcal{L}}
 \newcommand{\ZT}{\mathcal{Z}}
 \newcommand{\Av}{\operatorname{Av}}
+\newcommand{\Sa}{\operatorname{Sa}}
 \newcommand{\sinc}{\operatorname{sinc}}
 \newcommand{\rect}{\operatorname{rect}}
 \newcommand{\dd}{\mathrm{d}}
 
-\hypersetup{
-  colorlinks=true,
-  linkcolor=hlavicka,
-  pdftitle={SAS -- Klíčové otázky hvězdičkou},
+\hypersetup{colorlinks,linkcolor=tmavemodr,pdftitle={SAS Klicove otazky}}
+
+% Číslování otázek
+\newcounter{otcnt}
+\newcommand{\QA}[2]{%
+  \stepcounter{otcnt}%
+  \begin{Otazka}{}%
+    $\bigstar$ Otázka \theotcnt: #1%
+  \end{Otazka}%
+  \begin{Odpoved}%
+    #2%
+  \end{Odpoved}%
+  \vspace{1em}%
 }
 
 % ============================================================
@@ -108,16 +130,19 @@
 \begin{titlepage}
   \centering
   \vspace*{2cm}
-  {\Huge\bfseries\color{hvezdicka} $\bigstar$ Klíčové otázky\\[0.4em]
-   \LARGE\color{hlavicka} B2B37SAS – Signály a soustavy}\\[1.5cm]
-  \begin{tcolorbox}[colback=pozadihv,colframe=hvezdicka,width=0.9\linewidth]
-    \centering\large
-    Tyto otázky jsou označeny hvězdičkou ($\bigstar$) jako \textbf{naprosto základní nosná témata}.\\[4pt]
-    Jejich zásadní neznalost u ústní zkoušky může vést k udělení \textbf{F (nedostatečně)}\\
+  {\fontsize{40}{48}\selectfont\bfseries\color{cervena}$\bigstar$}\\[0.5cm]
+  {\Huge\bfseries\color{tmavemodr} Klíčové otázky\\[0.3em]
+   \large B2B37SAS – Signály a soustavy}\\[1.2cm]
+  \begin{tcolorbox}[colback=cervena!10,colframe=cervena,width=0.88\linewidth,
+                    left=10pt,right=10pt,top=8pt,bottom=8pt]
+    \centering\normalsize
+    Hvězdičkou ($\bigstar$) jsou označena \textbf{naprosto základní nosná témata}.\\[4pt]
+    Jejich zásadní neznalost u ústní zkoušky může vést k udělení \textbf{F}\\
     bez ohledu na předchozí bodové hodnocení.
   \end{tcolorbox}
-  \vspace{1cm}
-  {\large Celkem \textbf{22 klíčových otázek} ze 7 okruhů}
+  \vspace{0.8cm}
+  {\large Celkem \textbf{29 klíčových otázek} ze 7 okruhů}\\[0.3cm]
+  {\normalsize Formát: znění otázky + podrobná odpověď}
   \vfill
   {\large\today}
 \end{titlepage}
@@ -129,736 +154,820 @@
 \section{Klasifikace signálů ve spojitém a diskrétním čase}
 % ============================================================
 
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Co je to signál?}]
+\QA{Co je to signál?}{%
+  \textbf{Signál} je reálná nebo komplexní funkce nezávislé proměnné – nejčastěji čas $t$ nebo index vzorku $k$:
+  \[
+    s: \mathbb{R} \to \mathbb{R} \quad \text{(nebo } \mathbb{C}\text{)}
+    \qquad
+    s: \mathbb{Z} \to \mathbb{R} \quad \text{(nebo } \mathbb{C}\text{)}
+  \]
+  \begin{itemize}[itemsep=3pt]
+    \item Signál popisuje veličinu, která se mění v čase (napětí, zvuk, elektromagnetická vlna, teplota).
+    \item U obrazů jsou nezávislou proměnnou souřadnice $x, y$ – jde o dvoudimenzionální signál $s(x,y)$.
+    \item Signál je matematickým modelem fyzikálního děje – nosič informace.
+  \end{itemize}
+  \begin{Poznamka}[Příklady]
+    Jednorozměrné: zvuk $s(t)$, napětí $u(t)$, radiový signál. Dvourozměrné: černobílý obraz $s(x,y)$. Vícerozměrné: video, MRI.
+  \end{Poznamka}
+}
 
-\textbf{Signál} je reálná nebo komplexní funkce nezávislé proměnné (nejčastěji čas~$t$ nebo index~$k$):
-\[
-  s: \mathbb{R} \to \mathbb{R} \quad \text{nebo} \quad s: \mathbb{Z} \to \mathbb{R}
-\]
-\begin{itemize}[leftmargin=1.5em,itemsep=2pt]
-  \item Popisuje veličinu, která se mění v čase (zvuk, napětí, elektromagnetické pole).
-  \item Může být 1D ($s(t)$), 2D (obraz $s(x,y)$) nebo vícedimenzionální.
-  \item U obrazů jsou nezávislou proměnnou souřadnice $x, y$.
-\end{itemize}
-\end{tcolorbox}
+\QA{Jak vypadá signál ve spojitém a diskrétním čase?}{%
+  \begin{Info}[Spojitý čas]
+    Nezávislá proměnná $t \in \mathbb{R}$ – signál $s(t)$ je definován pro \textbf{každý} reálný časový okamžik. Má obvykle hladký průběh. Příklady: analogový zvuk, napětí na kondenzátoru.
+  \end{Info}
 
-\vspace{0.5em}
+  \begin{Info}[Diskrétní čas]
+    Nezávislá proměnná $k \in \mathbb{Z}$ – signál $s[k]$ je definován jen v \textbf{celočíselných okamžicích}. Vzniká vzorkováním spojitého signálu s periodou $T_{sa}$:
+    \[
+      s[k] = s(kT_{sa}), \quad T_{sa} = \frac{1}{f_{sa}}
+    \]
+  \end{Info}
 
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Jak vypadá signál ve spojitém a diskrétním čase?}]
+  Kombinace spojitého/diskrétního času a spojitých/diskrétních hodnot dává 4 typy signálů. \textbf{Vzorkování} převádí spojitý čas na diskrétní; \textbf{kvantizace} převádí spojité hodnoty na diskrétní (vzniká digitální signál).
+}
 
-\begin{infoBox}[Spojitý čas]
-Nezávislá proměnná $t \in \mathbb{R}$. Signál je definován pro \textbf{každý} časový okamžik.
-\[
-  s(t), \quad t \in \mathbb{R}
-\]
-Příklady: analogový zvuk, napětí v RC obvodu.
-\end{infoBox}
+\QA{Jak vypadají a jaké základní vlastnosti mají jednotkový skok, obdélníkový impuls, jednotkový impuls, Diracův impuls a vzorkovací funkce?}{%
 
-\begin{infoBox}[Diskrétní čas]
-Nezávislá proměnná $k \in \mathbb{Z}$. Signál je definován jen pro celočíselné hodnoty – \textbf{vzorky}.
-\[
-  s[k], \quad k \in \mathbb{Z}, \qquad s[k] = s(kT_{sa})
-\]
-Vzniká vzorkováním spojitého signálu s periodou $T_{sa} = 1/f_{sa}$.
-\end{infoBox}
+  \textbf{1) Jednotkový skok} $1(t)$, resp.\ $u[k]$:
+  \begin{Vzorec}[]
+  \[
+    1(t) = \begin{cases} 0 & t < 0 \\ \tfrac{1}{2} & t = 0 \\ 1 & t > 0 \end{cases}
+    \qquad
+    u[k] = \begin{cases} 0 & k < 0 \\ 1 & k \geq 0 \end{cases}
+  \]
+  \end{Vzorec}
+  Vlastnosti: $\Av[1(t)] = \tfrac{1}{2}$, výkon $P = \tfrac{1}{2}$, ACF $R(\tau) = \tfrac{1}{2}$ (konstantní), výkonový signál.
 
-\begin{noteBox}[Další dělení]
-\begin{itemize}[itemsep=1pt]
-  \item \textbf{Spojité/diskrétní hodnoty}: kombinace čas $\times$ hodnoty dává 4 typy signálů.
-  \item \textbf{Vzorkování} převádí spojitý čas na diskrétní; \textbf{kvantizace} převádí spojité hodnoty na diskrétní.
-\end{itemize}
-\end{noteBox}
-\end{tcolorbox}
+  \vspace{0.5em}
+  \textbf{2) Obdélníkový impuls} $\rect(t/\tau)$:
+  \[
+    \rect\!\left(\tfrac{t}{\tau}\right) = 1\!\left(t+\tfrac{\tau}{2}\right) - 1\!\left(t-\tfrac{\tau}{2}\right)
+    \quad \Rightarrow \quad E = \tau
+  \]
+  Energetický signál. Složen ze dvou posunutých jednotkových skoků. FT: $\Sa(\omega\tau/2)$ – sinc funkce.
 
-\vspace{0.5em}
+  \vspace{0.5em}
+  \textbf{3) Jednotkový impuls} $\delta[k]$ (Kroneckerovo delta – diskrétní čas):
+  \begin{Vzorec}[]
+  \[
+    \delta[k] = \begin{cases} 1 & k = 0 \\ 0 & k \neq 0 \end{cases}
+  \]
+  \end{Vzorec}
+  Jde o Diracův impuls v diskrétním čase. Vzorkovací vlastnost: $\sum_k s[k]\,\delta[k-k_0] = s[k_0]$.
 
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Speciální signály – vlastnosti}]
+  \vspace{0.5em}
+  \textbf{4) Diracův impuls} $\delta(t)$ (spojitý čas):
+  \begin{Vzorec}[]
+  \[
+    \delta(t) = \frac{\dd}{\dd t}1(t),
+    \qquad
+    \int_{-\infty}^{+\infty}\!\delta(t)\,\dd t = 1 \quad \text{(jednotková plocha)}
+  \]
+  Vzorkovací (sifting) vlastnost: $\displaystyle\int_{-\infty}^{+\infty} s(t)\,\delta(t-t_0)\,\dd t = s(t_0)$
+  \end{Vzorec}
+  FT: $\FT\{\delta(t)\} = 1$ (konstantní spektrum – všechny frekvence jsou přítomny stejně).
 
-\textbf{Jednotkový skok} $1(t)$:
-\begin{matBox}[]
-\[
-  1(t) = \begin{cases} 0 & t < 0 \\ \tfrac{1}{2} & t = 0 \\ 1 & t > 0 \end{cases}
-  \qquad
-  u[k] = \begin{cases} 0 & k < 0 \\ 1 & k \geq 0 \end{cases}
-\]
-\end{matBox}
-Vlastnosti: $\Av[1(t)] = \frac{1}{2}$, výkon $P = \frac{1}{2}$, ACF $R(\tau) = \frac{1}{2}$ (konstantní). Výkonový signál.
+  \vspace{0.5em}
+  \textbf{5) Vzorkovací funkce} (sinc):
+  \begin{Vzorec}[]
+  \[
+    \Sa(t) = \frac{\sin t}{t},\quad \Sa(0)=1
+    \qquad
+    \sinc(t) = \frac{\sin(\pi t)}{\pi t} \quad \text{(normalizovaná)}
+  \]
+  \end{Vzorec}
+  Energie: $E_{\Sa}=\pi$. Nuly v $t=n\pi$, $n\in\mathbb{Z}\setminus\{0\}$. FT: obdélník ve spektru (duálnost s rect).
 
-\vspace{0.5em}
-\textbf{Obdélníkový impuls} $\rect(t/\tau)$:
-\[
-  \rect\!\left(\tfrac{t}{\tau}\right) = 1\!\left(t+\tfrac{\tau}{2}\right) - 1\!\left(t-\tfrac{\tau}{2}\right)
-  \quad \Rightarrow \quad E = \tau
-\]
-Energetický signál. FT: $\FT\{\rect(t/\tau)\} = \tau\cdot\sinc(\omega\tau/2\pi)$.
-
-\vspace{0.5em}
-\textbf{Jednotkový impuls} $\delta[k]$ (Kroneckerovo delta – diskrétní čas):
-\[
-  \delta[k] = \begin{cases} 1 & k = 0 \\ 0 & k \neq 0 \end{cases}
-\]
-
-\vspace{0.5em}
-\textbf{Diracův impuls} $\delta(t)$ (spojitý čas):
-\begin{matBox}[]
-\[
-  \delta(t) = \frac{\dd}{\dd t}1(t), \qquad \int_{-\infty}^{+\infty}\delta(t)\,\dd t = 1
-\]
-Vzorkovací vlastnost: $\displaystyle\int_{-\infty}^{+\infty} s(t)\,\delta(t-t_0)\,\dd t = s(t_0)$
-\end{matBox}
-FT: $\FT\{\delta(t)\} = 1$ (konstantní spektrum).
-
-\vspace{0.5em}
-\textbf{Vzorkovací funkce} (sinc):
-\begin{matBox}[]
-\[
-  \operatorname{Sa}(t) = \frac{\sin t}{t}, \quad \operatorname{Sa}(0) = 1
-  \qquad
-  \sinc(t) = \frac{\sin(\pi t)}{\pi t} \quad \text{(normalizovaná)}
-\]
-\end{matBox}
-$E = \pi$ (pro Sa), nuly v $t = n\pi$, $n \neq 0$. FT: obdélník ve spektru.
-\end{tcolorbox}
+  \begin{Poznamka}[Duálnost FT]
+    $\rect \xleftrightarrow{\FT} \Sa$ a $\delta \xleftrightarrow{\FT} 1$ – duální páry; co je obdélník v čase, je sinc ve spektru, a naopak.
+  \end{Poznamka}
+}
 
 \newpage
 % ============================================================
 \section{Spektrální reprezentace, korelace, Fourierovy transformace}
 % ============================================================
 
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Vzájemná korelační funkce a autokorelační funkce}]
+\QA{Co popisují a jaký je mechanismus výpočtu vzájemné korelační funkce a autokorelační funkce?}{%
+  \textbf{Vzájemná korelační funkce} $R_{12}(\tau)$ popisuje \textbf{míru podobnosti} dvou různých signálů $s_1$ a $s_2$ při vzájemném posuvu $\tau$:
+  \begin{Vzorec}[Spojitý čas]
+  \[
+    R_{12}(\tau) = \int_{-\infty}^{+\infty} s_1(t)\,s_2^*(t-\tau)\,\dd t
+  \]
+  \end{Vzorec}
+  \begin{Vzorec}[Diskrétní čas]
+  \[
+    R_{12}[m] = \sum_{k=-\infty}^{\infty} s_1[k]\,s_2^*[k-m]
+  \]
+  \end{Vzorec}
+  \textbf{Mechanismus}: signál $s_2$ postupně posouváme o $\tau$, pronásobujeme ho se $s_1$ a integrujeme. Hledáme posun $\tau$, při němž je vzájemná energie největší – signály si jsou nejpodobnější. Pro reálné signály: $R_{12}(\tau) = R_{21}(-\tau)$.
 
-\textbf{Vzájemná korelační funkce} $R_{12}(\tau)$ – míra podobnosti dvou signálů s uvažováním posunu:
-\begin{matBox}[]
-\[
-  R_{12}(\tau) = \int_{-\infty}^{+\infty} s_1(t)\,s_2^*(t-\tau)\,\dd t
-  \qquad
-  R_{12}[m] = \sum_{k=-\infty}^{\infty} s_1[k]\,s_2^*[k-m]
-\]
-\end{matBox}
-Mechanismus: posouváme $s_2$ o $\tau$, pronásobíme s $s_1$ a integrujeme. Hledáme $\tau$ s maximální podobností.\\
-Pro reálné signály: $R_{12}(\tau) = R_{21}(-\tau)$.
+  \vspace{0.5em}
+  \textbf{Autokorelační funkce} $R(\tau)$ popisuje \textbf{závislost signálu na sobě samém} s posunem $\tau$:
+  \begin{Vzorec}[Energetický signál]
+  \[
+    R(\tau) = \int_{-\infty}^{+\infty} s(t)\,s^*(t-\tau)\,\dd t, \qquad R(0) = E
+  \]
+  \end{Vzorec}
+  \begin{Vzorec}[Výkonový signál]
+  \[
+    R(\tau) = \Av\!\left[s(t+\tau)\,s^*(t)\right], \qquad R(0) = P
+  \]
+  \end{Vzorec}
+  Klíčové vlastnosti ACF:
+  \begin{itemize}[itemsep=2pt]
+    \item \textbf{Sudá funkce}: $R(\tau) = R(-\tau)$ (pro reálné signály).
+    \item \textbf{Globální maximum v $\tau=0$}: $|R(\tau)| \leq R(0)$.
+    \item $R(0) = E$ nebo $R(0) = P$.
+  \end{itemize}
+  \begin{Poznamka}[Praktické využití]
+    GPS – korelace přijatého signálu s referenčními kódy pro zjištění zpoždění. Radar – detekce odraženého pulzu. Detekce opakujících se vzorů v signálu.
+  \end{Poznamka}
+}
 
-\vspace{0.5em}
-\textbf{Autokorelační funkce} $R(\tau)$ – závislost signálu na sobě samém:
-\begin{matBox}[]
-\[
-  R(\tau) = \int_{-\infty}^{+\infty} s(t)\,s^*(t-\tau)\,\dd t \quad \text{(energetický)}
-  \qquad
-  R(\tau) = \Av[s(t+\tau)\,s^*(t)] \quad \text{(výkonový)}
-\]
-\end{matBox}
-Klíčové vlastnosti:
-\begin{itemize}[itemsep=2pt]
-  \item Sudá funkce: $R(\tau) = R(-\tau)$ (pro reálné signály).
-  \item Globální maximum v $\tau=0$: $|R(\tau)| \leq R(0)$.
-  \item $R(0) = E$ (energetické) nebo $R(0) = P$ (výkonové signály).
-\end{itemize}
-Využití: GPS, detekce radarových odrazů, lokalizace podobnosti signálů.
-\end{tcolorbox}
+\QA{Co to znamená, když jsou dva signály vzájemně ortogonální?}{%
+  Signály $s_1(t)$ a $s_2(t)$ jsou \textbf{vzájemně ortogonální}, pokud jejich vzájemná energie (resp.\ výkon) je nulová:
+  \begin{Vzorec}[Podmínka ortogonality]
+  \[
+    E_{12} = \int_{-\infty}^{+\infty} s_1(t)\,s_2^*(t)\,\dd t = 0
+    \quad \Leftrightarrow \quad s_1 \perp s_2
+  \]
+  \end{Vzorec}
+  \textbf{Fyzikální význam}: ortogonální signály se \textit{vzájemně neovlivňují} – nemají žádný „energetický průnik".
 
-\vspace{0.5em}
+  \textbf{Proč je ortogonalita důležitá?}
+  \begin{itemize}[itemsep=3pt]
+    \item Je \textbf{nutnou podmínkou jednoznačnosti} rozkladu signálu do bázových funkcí (Fourierova řada).
+    \item Rozklad signálu je jednoznačný právě tehdy, když jsou bázové funkce ortogonální – nelze je zaměnit.
+    \item Koeficienty FS jsou proto určeny jednoznačně: $c_n = \frac{1}{T_0}\int_{T_0} s(t)\,e^{-jn\omega_0 t}\,\dd t$.
+  \end{itemize}
+  \begin{Poznamka}[Příklady ortogonálních signálů]
+    $\sin(n\omega_0 t) \perp \cos(m\omega_0 t)$ pro všechna $n, m$.\\
+    $\sin(n\omega_0 t) \perp \sin(m\omega_0 t)$ pro $n \neq m$. \\
+    Prakticky: OFDM subnosné, CDMA kódy, kvadraturní složky I/Q.
+  \end{Poznamka}
+}
 
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Ortogonalita dvou signálů}]
+\QA{Vysvětlete princip rozkladu periodického signálu do Fourierovy řady.}{%
+  Každý periodický signál $s(t)$ s periodou $T_0$ lze vyjádřit jako \textbf{nekonečnou lineární kombinaci komplexních harmonických funkcí}:
+  \begin{Vzorec}[Fourierova řada – syntéza a analýza]
+  \[
+    s(t) = \sum_{n=-\infty}^{+\infty} c_n\, e^{jn\omega_0 t},
+    \qquad \omega_0 = \frac{2\pi}{T_0}
+  \]
+  \[
+    c_n = \frac{1}{T_0}\int_{T_0} s(t)\, e^{-jn\omega_0 t}\,\dd t
+  \]
+  \end{Vzorec}
+  \textbf{Princip krok za krokem}:
+  \begin{enumerate}[itemsep=3pt]
+    \item Bázové funkce $\{e^{jn\omega_0 t}\}_{n\in\mathbb{Z}}$ tvoří \textbf{úplný ortogonální systém} – vzájemně se neovlivňují, takže popis je jednoznačný.
+    \item Koeficient $c_n$ udává, \textit{jak velký podíl $n$-té harmonické} (kmitočtu $n\omega_0$) je obsažen v signálu $s(t)$.
+    \item Výpočet $c_n$: pronásobíme $s(t)$ komplexně sdruženou bázovou funkcí $e^{-jn\omega_0 t}$ a průměrujeme přes periodu. Dělení $1/T_0$ zajišťuje ortonormalitu.
+    \item Výsledné spektrum je \textbf{diskrétní, neperiodické} (čárové spektrum na násobcích $\omega_0$).
+  \end{enumerate}
+  \begin{Vzorec}[Parsevalova věta – výkon přes koeficienty]
+  \[
+    P = \sum_{n=-\infty}^{+\infty}|c_n|^2 = R(0)
+  \]
+  \end{Vzorec}
+  \begin{Poznamka}[Proč harmonické funkce?]
+    Jsou periodické, snadno derivovatelné, ortogonální a tvoří úplný systém. Navíc jsou vlastními funkcemi LTI soustav – soustava mění jen amplitudu a fázi.
+  \end{Poznamka}
+}
 
-Signály $s_1(t)$ a $s_2(t)$ jsou \textbf{vzájemně ortogonální}, pokud jejich vzájemná energie (výkon) je nulová:
-\begin{matBox}[]
-\[
-  E_{12} = \int_{-\infty}^{+\infty} s_1(t)\,s_2^*(t)\,\dd t = 0
-  \quad \Leftrightarrow \quad s_1 \perp s_2
-\]
-\end{matBox}
-\begin{itemize}[itemsep=2pt]
-  \item Ortogonální signály se \textbf{vzájemně neovlivňují} – jejich energetický „průnik" je nulový.
-  \item Ortogonalita je podmínkou \textbf{jednoznačnosti} rozkladu signálu do bázových funkcí.
-  \item Příklady: $\sin(n\omega_0 t)$ a $\cos(m\omega_0 t)$ pro různá $n, m$ – základ Fourierovy řady.
-  \item Prakticky: různé kanály v OFDM, různé kódy v CDMA sítích.
-\end{itemize}
-\end{tcolorbox}
+\QA{Popište aplikaci Fourierovy transformace (FT) k výpočtu spektra obecných signálů ve spojitém čase.}{%
+  \textbf{Fourierova transformace (FT)} zobecňuje principy FS i na \textbf{neperiodické spojité signály}. Je odvozena limitním přechodem: z periodického signálu vyřízneme část délky $T$, aproximujeme ji FS a provedeme $T \to \infty$ – základní kmitočet $\omega_0 \to 0$, spektrum se zahustí a přejde ze součtu na integrál:
+  \begin{Vzorec}[Přímá Fourierova transformace]
+  \[
+    S(\omega) = \FT\{s(t)\} = \int_{-\infty}^{+\infty} s(t)\, e^{-j\omega t}\,\dd t
+  \]
+  \end{Vzorec}
+  \begin{Vzorec}[Zpětná Fourierova transformace]
+  \[
+    s(t) = \FT^{-1}\{S(\omega)\} = \frac{1}{2\pi}\int_{-\infty}^{+\infty} S(\omega)\, e^{j\omega t}\,\dd\omega
+  \]
+  \end{Vzorec}
+  \begin{itemize}[itemsep=3pt]
+    \item Výsledné spektrum $S(\omega)$ je \textbf{spojité, neperiodické}.
+    \item Pro reálný signál $s(t)\in\mathbb{R}$: amplitudové spektrum $|S(\omega)|$ je \textbf{sudé}, fázové spektrum $\arg S(\omega)$ je \textbf{liché}.
+  \end{itemize}
+  \begin{Vzorec}[Parsevalova věta pro FT]
+  \[
+    E = \int_{-\infty}^{+\infty}|s(t)|^2\,\dd t = \frac{1}{2\pi}\int_{-\infty}^{+\infty}|S(\omega)|^2\,\dd\omega
+  \]
+  \end{Vzorec}
+  \begin{Poznamka}[FT vs.\ FS]
+    FS: periodický signál $\to$ diskrétní spektrum. FT: obecný (neperiodický) signál $\to$ spojité spektrum. FT je zobecněním FS na celou třídu signálů.
+  \end{Poznamka}
+}
 
-\vspace{0.5em}
+\QA{Jak vypadá spektrum Fourierovy transformace pro Diracův impuls, konstantní signál, vzorkovací funkci, obdélníkový impuls a harmonický signál?}{%
+  \begin{center}
+  \renewcommand{\arraystretch}{1.6}
+  \begin{tabular}{ll p{5cm}}
+  \toprule
+  \textbf{Signál} $s(t)$ & \textbf{Spektrum} $S(\omega)$ & \textbf{Komentář} \\
+  \midrule
+  $\delta(t)$ & $1$ & Dirac má plochá spektrum – obsahuje všechny frekvence stejnou měrou \\
+  $1$ (konstanta) & $2\pi\,\delta(\omega)$ & Konstantní signál má veškerý výkon na $\omega=0$ \\
+  $\Sa(\omega_0 t)$ & $\dfrac{\pi}{\omega_0}\rect\!\!\left(\dfrac{\omega}{2\omega_0}\right)$ & Sinc v čase dává obdélník ve spektru \\
+  $\rect(t/\tau)$ & $\tau\,\Sa(\omega\tau/2)$ & Obdélník v čase dává sinc ve spektru \\
+  $\cos(\omega_0 t)$ & $\pi[\delta(\omega-\omega_0)+\delta(\omega+\omega_0)]$ & Dva Diraci na $\pm\omega_0$ \\
+  $e^{j\omega_0 t}$ & $2\pi\,\delta(\omega-\omega_0)$ & Jeden Dirac na $\omega_0$ \\
+  \bottomrule
+  \end{tabular}
+  \end{center}
+  \begin{Poznamka}[Princip duality FT]
+    FT je duální: obdélník $\leftrightarrow$ sinc, Dirac $\leftrightarrow$ konstanta. Pokud znáte FT jednoho páru, ihned víte i FT opačného.
+  \end{Poznamka}
+}
 
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Rozklad periodického signálu do Fourierovy řady}]
+\QA{Jakou základní vlastnost má spektrum DtFT diskrétních signálů?}{%
+  Diskrétní Fourierova transformace v čase (\textbf{DtFT}) přiřazuje diskrétnímu neperiodickému signálu spektrum:
+  \begin{Vzorec}[DtFT]
+  \[
+    S(e^{j\Omega}) = \sum_{k=-\infty}^{\infty} s[k]\, e^{-j\Omega k}
+    \qquad
+    s[k] = \frac{1}{2\pi}\int_{-\pi}^{\pi} S(e^{j\Omega})\, e^{j\Omega k}\,\dd\Omega
+  \]
+  \end{Vzorec}
+  \textbf{Základní vlastnost}: spektrum DtFT je \textbf{spojité a periodické} s periodou $2\pi$ (nebo $\omega_{sa}$ v rad/s):
+  \[
+    S(e^{j(\Omega + 2\pi)}) = S(e^{j\Omega})
+  \]
+  \textbf{Proč je spektrum periodické?} Diskrétní signál vznikl vzorkováním s kmitočtem $f_{sa}$ – ve spektrální oblasti se proto periodicky opakují kopie spektra s periodou $\omega_{sa}$. DtFT tuto periodicitu přímo zahrnuje do definice.
+  \begin{Info}[Přehled – typ signálu vs.\ typ spektra]
+    \begin{tabular}{ll}
+      FT (spojitý neperiodický) & $\to$ spektrum: spojité, neperiodické \\
+      DtFT (diskrétní neperiodický) & $\to$ spektrum: \textbf{spojité, periodické} \\
+      FS (spojitý periodický) & $\to$ spektrum: diskrétní, neperiodické \\
+      DFS (diskrétní periodický) & $\to$ spektrum: diskrétní, periodické \\
+    \end{tabular}
+  \end{Info}
+}
 
-Každý periodický signál $s(t)$ s periodou $T_0$ lze rozložit do nekonečné lineární kombinace harmonických:
-\begin{matBox}[Fourierova řada – syntéza a analýza]
-\[
-  s(t) = \sum_{n=-\infty}^{+\infty} c_n\, e^{jn\omega_0 t}, \qquad \omega_0 = \frac{2\pi}{T_0}
-\]
-\[
-  c_n = \frac{1}{T_0}\int_{T_0} s(t)\, e^{-jn\omega_0 t}\,\dd t
-\]
-\end{matBox}
-Princip:
-\begin{enumerate}[itemsep=2pt]
-  \item Bázové funkce $\{e^{jn\omega_0 t}\}$ tvoří \textbf{úplný ortogonální systém} – vzájemně se neovlivňují.
-  \item Koeficient $c_n$ říká, jak velký podíl $n$-té harmonické je v signálu.
-  \item Dělení $1/T_0$ zajišťuje ortonormalitu.
-  \item Výsledné spektrum je \textbf{diskrétní, neperiodické} (čárové spektrum).
-  \item Výkon: $P = \sum_{n=-\infty}^{+\infty}|c_n|^2 = R(0)$ \quad (Parsevalova věta)
-\end{enumerate}
-\end{tcolorbox}
+\QA{Vysvětlete význam věty o Fourierově transformaci konvoluce dvou signálů.}{%
+  \begin{Vzorec}[Konvoluční věta]
+  \[
+    \FT\{s_1(t) * s_2(t)\} = S_1(\omega)\cdot S_2(\omega)
+  \]
+  \[
+    \FT\{s_1(t)\cdot s_2(t)\} = \frac{1}{2\pi}\,S_1(\omega) * S_2(\omega)
+  \]
+  \end{Vzorec}
+  \textbf{Fyzikální/matematický smysl}: konvoluce v časové oblasti (operace náročná na výpočet) odpovídá pouhému \textit{násobení} ve spektrální oblasti (snadná operace), a naopak.
 
-\vspace{0.5em}
-
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Fourierova transformace (FT) – spektrum obecných signálů}]
-
-FT zobecňuje FS na \textbf{neperiodické spojité signály} (limitní přechod $T_0 \to \infty$):
-\begin{matBox}[FT a zpětná FT]
-\[
-  S(\omega) = \int_{-\infty}^{+\infty} s(t)\, e^{-j\omega t}\,\dd t
-  \qquad
-  s(t) = \frac{1}{2\pi}\int_{-\infty}^{+\infty} S(\omega)\, e^{j\omega t}\,\dd\omega
-\]
-\end{matBox}
-\begin{itemize}[itemsep=2pt]
-  \item Výsledné spektrum je \textbf{spojité, neperiodické}.
-  \item Pro reálný signál: $|S(\omega)| = |S(-\omega)|$ (sudá amplituda), $\arg S(\omega) = -\arg S(-\omega)$ (lichá fáze).
-  \item Parsevalova věta: $E = \int|s(t)|^2\dd t = \frac{1}{2\pi}\int|S(\omega)|^2\dd\omega$.
-\end{itemize}
-\end{tcolorbox}
-
-\vspace{0.5em}
-
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Spektra základních signálů (FT)}]
-
-\begin{center}
-\renewcommand{\arraystretch}{1.4}
-\begin{tabular}{lll}
-\toprule
-\textbf{Signál} $s(t)$ & \textbf{Spektrum} $S(\omega)$ & \textbf{Klíčový rys} \\
-\midrule
-$\delta(t)$ & $1$ & konstanta (vše zastoupeno stejně) \\
-$1$ (konstantní) & $2\pi\,\delta(\omega)$ & Dirac na $\omega=0$ \\
-$\operatorname{Sa}(\omega_0 t)$ & $\dfrac{\pi}{\omega_0}\rect\!\left(\dfrac{\omega}{2\omega_0}\right)$ & obdélník \\
-$\rect(t/\tau)$ & $\tau\,\operatorname{Sa}(\omega\tau/2)$ & sinc funkce \\
-$e^{j\omega_0 t}$ & $2\pi\,\delta(\omega-\omega_0)$ & Dirac v $\omega_0$ \\
-$\cos(\omega_0 t)$ & $\pi[\delta(\omega-\omega_0)+\delta(\omega+\omega_0)]$ & dva Diraci \\
-\bottomrule
-\end{tabular}
-\end{center}
-\textbf{Dualita FT}: obdélník $\leftrightarrow$ sinc, Dirac $\leftrightarrow$ konstanta.
-\end{tcolorbox}
-
-\vspace{0.5em}
-
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ DtFT – základní vlastnost spektra diskrétních signálů}]
-
-Diskrétní Fourierova transformace v čase (DtFT) zobrazuje diskrétní neperiodický signál na \textbf{spojité, periodické spektrum}:
-\begin{matBox}[DtFT]
-\[
-  S(e^{j\Omega}) = \sum_{k=-\infty}^{\infty} s[k]\, e^{-j\Omega k}
-  \qquad
-  s[k] = \frac{1}{2\pi}\int_{-\pi}^{\pi} S(e^{j\Omega})\, e^{j\Omega k}\,\dd\Omega
-\]
-\end{matBox}
-Spektrum je \textbf{periodické s periodou $2\pi$} (nebo $\omega_{sa}$ v rad/s).\\[4pt]
-\textbf{Proč periodické?} Diskrétní signál vznikl vzorkováním – ve spektru se proto periodicky opakují kopie originálu.
-\end{tcolorbox}
-
-\vspace{0.5em}
-
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Věta o FT konvoluce dvou signálů}]
-
-\begin{matBox}[Konvoluční věta]
-\[
-  \FT\{s_1(t) * s_2(t)\} = S_1(\omega)\cdot S_2(\omega)
-\]
-\[
-  \FT\{s_1(t)\cdot s_2(t)\} = \frac{1}{2\pi}\,S_1(\omega) * S_2(\omega)
-\]
-\end{matBox}
-\textbf{Fyzikální význam}: konvoluce v čase = násobení ve spektru. Klíčové důsledky:
-\begin{itemize}[itemsep=2pt]
-  \item \textbf{LTI soustavy}: $Y(\omega) = H(\omega)\cdot X(\omega)$ – filtraci stačí provést jako násobení spekter.
-  \item \textbf{Vzorkování}: násobení Diracovým hřebenem v čase = periodizace ve spektru.
-  \item \textbf{Modulace}: násobení nosnou v čase = posunutí spektra do nosného kmitočtu.
-\end{itemize}
-\end{tcolorbox}
+  \textbf{Klíčové důsledky a využití}:
+  \begin{itemize}[itemsep=4pt]
+    \item \textbf{LTI soustava}: výstup $y(t) = x(t)*h(t)$ odpovídá ve spektru $Y(\omega) = X(\omega)\cdot H(\omega)$. Filtraci stačí provést jako násobení spekter.
+    \item \textbf{Vzorkování}: vzorkování = násobení Diracovým hřebenem v čase $\Rightarrow$ ve spektru konvoluce s hřebenem = periodizace spektra.
+    \item \textbf{Modulace}: násobení nosnou v čase $\Rightarrow$ posun spektra do nosného kmitočtu.
+    \item \textbf{FFT}: umožňuje rychlý výpočet konvoluce přes DFT: místo $O(N^2)$ operací jen $O(N\log N)$.
+  \end{itemize}
+}
 
 \newpage
 % ============================================================
 \section{Vzorkování a interpolace}
 % ============================================================
 
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Shannonův vzorkovací teorém}]
+\QA{Vysvětlete ve spektrální oblasti odvození, význam a důsledky Shannonova vzorkovacího teorému.}{%
+  \textbf{Formulace}: Spektrálně omezený signál s maximálním kmitočtem $f_m$ lze jednoznačně rekonstruovat ze svých vzorků, je-li splněna \textbf{Shannonova (Nyquistova) podmínka}:
+  \begin{Vzorec}[Vzorkovací podmínka]
+  \[
+    f_{sa} > 2f_m \qquad \Leftrightarrow \qquad \omega_{sa} > 2\omega_m
+  \]
+  \end{Vzorec}
+  \textbf{Odvození ve spektrální oblasti}:
+  \begin{enumerate}[itemsep=4pt]
+    \item \textbf{Ideální vzorkování} = násobení signálu Diracovým hřebenem:
+      \[
+        s_a(t) = s(t)\cdot\sum_{k=-\infty}^{\infty}\delta(t-kT_{sa})
+      \]
+    \item FT Diracova hřebene je opět hřeben s periodou $\omega_{sa}$. Proto:
+      \[
+        S_a(\omega) = \frac{1}{T_{sa}}\sum_{n=-\infty}^{\infty} S(\omega - n\omega_{sa})
+      \]
+      Spektrum vzorkovaného signálu je \textbf{periodická kopie} originálu s periodou $\omega_{sa}$.
+    \item \textbf{Rekonstrukce}: je-li $\omega_{sa} > 2\omega_m$, kopie spektra se \textit{nepřekrývají}. Ideální dolní propustí s mezním kmitočtem $\omega_{sa}/2$ lze kopie oddělit a získat zpět $S(\omega)$.
+    \item Je-li $\omega_{sa} \leq 2\omega_m$: kopie se překrývají – nastává \textbf{aliasing} (neodstranitelné zkreslení).
+  \end{enumerate}
+  \begin{Poznamka}[Aliasing – důsledek porušení podmínky]
+    Při aliasingu se vysokofrekvenční složky signálu jeví jako nízkofrekvenční – dochází k nevratnému zkreslení. Prevence: anti-aliasing filtr (DP) před vzorkováním.
+  \end{Poznamka}
+}
 
-\textbf{Formulace}: spektrálně omezený signál ($f_{max} = f_m$) lze jednoznačně rekonstruovat ze vzorků, pokud:
-\begin{matBox}[]
-\[
-  f_{sa} > 2f_m \qquad \Leftrightarrow \qquad \omega_{sa} > 2\omega_m
-\]
-\end{matBox}
-\textbf{Odvození ve spektrální oblasti}:
-\begin{enumerate}[itemsep=2pt]
-  \item Vzorkování = násobení Diracovým hřebenem $p(t) = \sum_k \delta(t - kT_{sa})$.
-  \item Ve spektru: $S_a(\omega) = \frac{1}{T_{sa}}\sum_{n} S(\omega - n\omega_{sa})$ – periodické kopie spektra.
-  \item Kopie se \textbf{nepřekrývají} $\Leftrightarrow$ $\omega_{sa} > 2\omega_m$.
-  \item Rekonstrukce: ideální dolní propust s mezním kmitočtem $\omega_{sa}/2$.
-\end{enumerate}
-\begin{noteBox}[Aliasing]
-Pokud $f_{sa} \leq 2f_m$: kopie spektra se překrývají $\to$ \textbf{aliasing} – rekonstrukce je zkreslená a nevratná.
-\end{noteBox}
-\end{tcolorbox}
-
-\vspace{0.5em}
-
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Ideální interpolace vzorkovaného signálu}]
-
-Rekonstrukce spojitého signálu ze vzorků $s[k] = s(kT_{sa})$:
-\begin{matBox}[Whittaker–Shannon interpolační vzorec]
-\[
-  s(t) = \sum_{k=-\infty}^{\infty} s(kT_{sa})\cdot\operatorname{Sa}\!\left(\frac{\pi(t-kT_{sa})}{T_{sa}}\right)
-\]
-\end{matBox}
-Postup:
-\begin{enumerate}[itemsep=2pt]
-  \item Vzorky nahradíme váhovanými Dirakovými impulsy.
-  \item Výsledek filtrujeme \textbf{ideální dolní propustí} (mezní kmitočet $\omega_{sa}/2$).
-  \item Impulsová odezva DP = sinc funkce $\Rightarrow$ v časové oblasti interpolace sincem.
-\end{enumerate}
-\textbf{Problémy realizace}: ideální DP je nekauzální a nerealizovatelná. V praxi: FIR/IIR filtr (přijatelné zkreslení).
-\end{tcolorbox}
+\QA{Vysvětlete proces ideální interpolace vzorkovaného signálu.}{%
+  \textbf{Ideální interpolace} = rekonstrukce spojitého signálu $s(t)$ ze vzorků $s[k] = s(kT_{sa})$.
+  \begin{Vzorec}[Whittaker–Shannon – ideální interpolace]
+  \[
+    s(t) = \sum_{k=-\infty}^{\infty} s(kT_{sa})\cdot\Sa\!\left(\frac{\pi(t-kT_{sa})}{T_{sa}}\right)
+  \]
+  \end{Vzorec}
+  \textbf{Postup}:
+  \begin{enumerate}[itemsep=3pt]
+    \item Vzorky $s[k]$ nahradíme váhovanými \textbf{Dirakovými impulsy} – vznikne ideálně vzorkovaný signál.
+    \item Výsledek filtrujeme \textbf{ideální dolní propustí} s mezním kmitočtem $\omega_{sa}/2$ a zesílením $T_{sa}$.
+    \item Impulsová odezva ideální DP je $\Sa$ funkce $\Rightarrow$ v čase dochází k interpolaci sincem.
+  \end{enumerate}
+  \textbf{Problémy realizace}: ideální DP je \textit{nekauzální} (nerealizovatelná) a pro generování Diracových impulsů nejsou fyzikální prostředky. V praxi se používají realizovatelné FIR/IIR filtry s přijatelným zkreslením.
+}
 
 \newpage
 % ============================================================
 \section{Klasifikace soustav, LTI, konvoluce, stabilita}
 % ============================================================
 
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Co je to soustava a operátor soustavy?}]
+\QA{Co je to soustava a operátor soustavy?}{%
+  \textbf{Soustava} (systém) je objekt, který pod vlivem \textbf{buzení} (vstupního signálu $x$) produkuje \textbf{odezvu} (výstupní signál $y$):
+  \[
+    y = \mathcal{A}\{x\}
+  \]
+  $\mathcal{A}$ je \textbf{operátor soustavy} – matematický popis transformace vstupního signálu na výstupní.
 
-\textbf{Soustava} = objekt, který pod vlivem buzení $x$ produkuje odezvu $y$:
-\[
-  y = \mathcal{A}\{x\}
-\]
-$\mathcal{A}$ je \textbf{operátor soustavy}. Dává do vztahu skupinu signálů (fyzikálních nebo matematických veličin).\\[4pt]
-Příklady: filtry, zesilovače, přenosová vedení, modulátory, antény, kanály.
-\end{tcolorbox}
+  Soustava dává do vztahu skupinu signálů – skládá se z fyzikálních nebo matematických součástí. Může mít více vstupů a výstupů (MIMO).
+  \begin{Info}[Příklady soustav]
+    Filtry, zesilovače, přenosová vedení, modulátory, demodulátory, antény, přenosové kanály, enkodéry/dekodéry.
+  \end{Info}
+  \begin{Poznamka}[Smíšené soustavy]
+    \textbf{Vzorkovač}: spojitý vstup $\to$ diskrétní výstup. \textbf{Interpolátor} (D/A): diskrétní vstup $\to$ spojitý výstup.
+  \end{Poznamka}
+}
 
-\vspace{0.5em}
+\QA{Vysvětlete význam lineárních a časově invariantních soustav LTI.}{%
+  Soustava $\mathcal{A}$ je \textbf{LTI} (Linear Time-Invariant), pokud splňuje dvě podmínky:
 
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ LTI soustavy (Linear Time-Invariant)}]
+  \textbf{1) Linearita} – princip superpozice:
+  \begin{Vzorec}[]
+  \[
+    \mathcal{A}\{\alpha x_1(t) + \beta x_2(t)\} = \alpha\,\mathcal{A}\{x_1(t)\} + \beta\,\mathcal{A}\{x_2(t)\}
+  \]
+  \end{Vzorec}
+  Odezva na lineární kombinaci vstupů je lineární kombinací odezev na jednotlivé vstupy.
 
-Soustava $\mathcal{A}$ je LTI, pokud splňuje:
-\begin{enumerate}[itemsep=4pt]
-  \item \textbf{Linearita} (superpoziční princip):
-    \[
-      \mathcal{A}\{\alpha x_1 + \beta x_2\} = \alpha\,\mathcal{A}\{x_1\} + \beta\,\mathcal{A}\{x_2\}
-    \]
-  \item \textbf{Časová invariance}: posun vstupu o $t_0$ způsobí stejný posun výstupu:
-    \[
-      \mathcal{A}\{x(t-t_0)\} = y(t-t_0)
-    \]
-\end{enumerate}
-\textbf{Klíčový význam}: LTI soustava je plně popsána jedinou funkcí – \textbf{impulsovou odezvou} $h(t)$.\\
-Výstup je konvolucí: $y(t) = x(t) * h(t)$, resp.\ $Y(\omega) = X(\omega)\cdot H(\omega)$.
-\end{tcolorbox}
+  \textbf{2) Časová invariance} – posun vstupu způsobí stejný posun výstupu:
+  \begin{Vzorec}[]
+  \[
+    \mathcal{A}\{x(t-t_0)\} = y(t-t_0) \quad \forall\, t_0
+  \]
+  \end{Vzorec}
+  \textbf{Proč jsou LTI soustavy tak důležité?}
+  \begin{itemize}[itemsep=3pt]
+    \item LTI soustava je \textbf{plně popsána} jedinou funkcí – impulsovou odezvou $h(t)$.
+    \item Výstup je konvolucí: $y(t) = x(t) * h(t)$.
+    \item Ve spektrální oblasti: $Y(\omega) = X(\omega)\cdot H(\omega)$ – velmi efektivní popis.
+    \item Harmonická funkce je \textbf{vlastní funkcí} LTI soustavy: $e^{j\omega t} \to H(\omega)\,e^{j\omega t}$.
+    \item Většina reálných soustav (filtry, obvody) je LTI nebo se jím blíží.
+  \end{itemize}
+}
 
-\vspace{0.5em}
+\QA{Co je to impulsová odezva spojité a diskrétní LTI soustavy?}{%
+  \textbf{Impulsová odezva} $h(t)$ (resp.\ $h[k]$) je odezva LTI soustavy na \textbf{Diracův impuls} (resp.\ jednotkový impuls) na vstupu:
+  \begin{Vzorec}[]
+  \[
+    h(t) = \mathcal{A}\{\delta(t)\} \quad \text{(spojitý čas)}
+    \qquad
+    h[k] = \mathcal{A}\{\delta[k]\} \quad \text{(diskrétní čas)}
+  \]
+  \end{Vzorec}
+  \textbf{Proč plně charakterizuje soustavu?} Protože díky linearitě a časové invarianci lze z $h(t)$ odvodit odezvu na \textit{libovolný} vstup $x(t)$ pomocí konvoluce:
+  \[
+    y(t) = x(t) * h(t) = \int_{-\infty}^{+\infty} x(\tau)\,h(t-\tau)\,\dd\tau
+  \]
+  \textbf{Kauzalita a stabilita čtená z $h(t)$}:
+  \begin{itemize}[itemsep=3pt]
+    \item \textbf{Kauzalita}: $h(t) = 0$ pro $t < 0$ – soustava nereaguje na budoucnost.
+    \item \textbf{BIBO stabilita}: $\int_{-\infty}^{+\infty}|h(t)|\,\dd t < \infty$ (absolutní integrabilita).
+  \end{itemize}
+}
 
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Impulsová odezva LTI soustavy}]
+\QA{Vysvětlete princip a mechanismus výpočtu spojité a diskrétní konvoluce.}{%
+  Konvoluce je operace, která dává výstup LTI soustavy pro daný vstup:
+  \begin{Vzorec}[Spojitá konvoluce]
+  \[
+    y(t) = x(t) * h(t) = \int_{-\infty}^{+\infty} x(\tau)\,h(t-\tau)\,\dd\tau
+  \]
+  \end{Vzorec}
+  \begin{Vzorec}[Diskrétní konvoluce]
+  \[
+    y[k] = x[k] * h[k] = \sum_{i=-\infty}^{\infty} x[i]\,h[k-i]
+  \]
+  \end{Vzorec}
+  \textbf{Grafický postup} (pro každé $t$):
+  \begin{enumerate}[itemsep=3pt]
+    \item $x(\tau)$ – první signál jako funkce proměnné $\tau$.
+    \item $h(-\tau)$ – druhý signál \textbf{převrátíme} (zrcadlení podle osy $\tau=0$).
+    \item $h(t-\tau)$ – převrácený signál \textbf{posuneme doprava o $t$}.
+    \item Integrál (plocha pod grafem) součinu $x(\tau)\cdot h(t-\tau)$ = hodnota $y(t)$.
+    \item Opakujeme pro všechna $t$.
+  \end{enumerate}
+  Vlastnosti konvoluce: \textbf{komutativní} ($a*b = b*a$), asociativní, distributivní.\\
+  Délka výstupu: pro konečné signály délek $N_1$ a $N_2$ je délka výstupu $N_1 + N_2 - 1$.
+  \begin{Poznamka}[Výpočet přes FT]
+    Konvoluci lze efektivně spočítat jako $y(t) = \FT^{-1}\{X(\omega)\cdot H(\omega)\}$ (rychlejší pro dlouhé signály díky FFT).
+  \end{Poznamka}
+}
 
-\begin{matBox}[Definice]
-\[
-  h(t) = \mathcal{A}\{\delta(t)\} \quad \text{(spojitý čas)}
-  \qquad
-  h[k] = \mathcal{A}\{\delta[k]\} \quad \text{(diskrétní čas)}
-\]
-\end{matBox}
-Impulsová odezva \textbf{plně charakterizuje} LTI soustavu:
-\begin{itemize}[itemsep=2pt]
-  \item Kauzalita: $h(t) = 0$ pro $t < 0$.
-  \item Stabilita (BIBO): $\displaystyle\int_{-\infty}^{+\infty}|h(t)|\,\dd t < \infty$ (absolutní integrabilita).
-\end{itemize}
-\end{tcolorbox}
+\QA{Jak poznáme z impulsové odezvy soustavy, že jde o soustavu kauzální a stabilní?}{%
+  Z impulsové odezvy $h(t)$ (resp.\ $h[k]$) lze přímo určit obě vlastnosti:
+  \begin{Vzorec}[Kauzalita]
+  \[
+    h(t) = 0 \quad \text{pro } t < 0 \qquad \text{resp.} \qquad h[k] = 0 \quad \text{pro } k < 0
+  \]
+  \end{Vzorec}
+  Soustava reaguje jen na \textit{současné nebo minulé} hodnoty vstupu – nezávisí na budoucnosti.
 
-\vspace{0.5em}
+  \begin{Vzorec}[BIBO stabilita]
+  \[
+    \int_{-\infty}^{+\infty}|h(t)|\,\dd t < \infty
+    \qquad \text{resp.} \qquad
+    \sum_{k=-\infty}^{\infty}|h[k]| < \infty
+  \]
+  \end{Vzorec}
+  Impulsová odezva musí být \textbf{absolutně integrabilní (sumovatelná)}.
 
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Konvoluce – princip a výpočet}]
+  \textbf{Intuice}: je-li impulsová odezva příliš „velká" nebo trvá „příliš dlouho", soustava na omezený vstup může produkovat neomezený výstup – nestabilita.
+  \begin{Info}[Marginální stabilita]
+    Pokud $\int|h|\dd t = \infty$, ale soustava nevybuchuje pro ohraničený vstup – jde o \textit{marginálně stabilní} soustavu (napr.\ čistý integrátor). Taková soustava nesplňuje BIBO podmínku.
+  \end{Info}
+}
 
-\begin{matBox}[Konvoluce]
-\[
-  y(t) = x(t) * h(t) = \int_{-\infty}^{+\infty} x(\tau)\,h(t-\tau)\,\dd\tau
-  \qquad
-  y[k] = \sum_{i=-\infty}^{\infty} x[i]\,h[k-i]
-\]
-\end{matBox}
-\textbf{Grafický postup}:
-\begin{enumerate}[itemsep=2pt]
-  \item $s_1(\tau)$ – první signál jako funkce $\tau$.
-  \item $s_2(-\tau)$ – druhý signál \textbf{převrácený} (zrcadlení).
-  \item $s_2(t-\tau)$ – převrácený signál \textbf{posunutý} o $t$.
-  \item Integrál součinu = hodnota konvoluce pro daný $t$.
-\end{enumerate}
-Vlastnosti: komutativní, asociativní, distributivní.\\
-Délka výstupu: pro konečné signály délek $N_1$ a $N_2$: výstup má délku $N_1 + N_2 - 1$.
-\end{tcolorbox}
+\QA{Co je to systémová funkce LTI soustavy a jaký je její vztah k impulsové odezvě?}{%
+  \textbf{Systémová funkce} $H(s)$ (resp.\ $H(z)$) je \textbf{Laplaceova (resp.\ Z-) transformace impulsové odezvy}:
+  \begin{Vzorec}[]
+  \[
+    H(s) = \LT\{h(t)\} = \int_{-\infty}^{+\infty} h(t)\,e^{-st}\,\dd t \quad \text{(spojitý čas)}
+  \]
+  \[
+    H(z) = \ZT\{h[k]\} = \sum_{k=-\infty}^{\infty} h[k]\,z^{-k} \quad \text{(diskrétní čas)}
+  \]
+  \end{Vzorec}
+  Pro LTI soustavu popsanou diferenciální (diferenční) rovnicí je $H(s)$ racionální lomená funkce:
+  \[
+    H(s) = \frac{b_M s^M + \cdots + b_0}{a_N s^N + \cdots + a_0} = \frac{B(s)}{A(s)}
+  \]
+  \textbf{Vztah k frekvenční charakteristice}:
+  \[
+    H(\omega) = H(s)\big|_{s=j\omega} = \FT\{h(t)\} \quad \text{(platí pro stabilní soustavy)}
+  \]
+  \begin{Poznamka}[Membránový model]
+    Vizualizace $|H(s)|$ v komplexní rovině: nuly „přišpendlí" membránu k nule, póly ji „vytáhnou" nahoru. Přenosová funkce $|H(j\omega)|$ odpovídá výšce membrány podél imaginární osy.
+  \end{Poznamka}
+}
 
-\vspace{0.5em}
+\QA{Co jsou nuly a póly systémové funkce a jak z pozice pólů poznáme, zda je soustava stabilní?}{%
+  Pro systémovou funkci ve tvaru $H(s) = B(s)/A(s)$:
+  \begin{itemize}[itemsep=4pt]
+    \item \textbf{Nuly} – kořeny čitatele $B(s) = 0$: kmitočty, kde $|H(s)| = 0$ (soustava zcela potlačuje daný kmitočet).
+    \item \textbf{Póly} – kořeny jmenovatele $A(s) = 0$: charakteristické frekvence soustavy, kde $|H(s)| \to \infty$.
+  \end{itemize}
+  \begin{Vzorec}[Stabilita z polohy pólů]
+  \textbf{Spojitá soustava}: stabilní $\Leftrightarrow$ všechny póly v \textbf{levé polorovině}:
+  \[
+    \operatorname{Re}(p_i) < 0 \quad \forall\, i
+  \]
+  \textbf{Diskrétní soustava}: stabilní $\Leftrightarrow$ všechny póly \textbf{uvnitř jednotkové kružnice}:
+  \[
+    |p_i| < 1 \quad \forall\, i
+  \]
+  \end{Vzorec}
+  \textbf{Proč?} Impulsová odezva spojité soustavy má tvar $h(t) \sim e^{p_i t}$. Je-li $\operatorname{Re}(p_i) < 0$, funkce exponenciálně klesá $\Rightarrow$ absolutně integrabilní $\Rightarrow$ stabilní.
+  \begin{Info}[Marginální stabilita]
+    Pól na imaginární ose ($\operatorname{Re}(p_i) = 0$) nebo na jednotkové kružnici: marginálně stabilní soustava (neodmocňuje, ale nevybuchne).
+  \end{Info}
+}
 
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Kauzalita a stabilita z impulsové odezvy}]
-
-\begin{infoBox}[Kauzalita]
-$h(t) = 0$ pro $t < 0$ \quad (resp.\ $h[k] = 0$ pro $k < 0$)
-\end{infoBox}
-
-\begin{infoBox}[BIBO stabilita]
-\[
-  \int_{-\infty}^{+\infty}|h(t)|\,\dd t < \infty
-  \qquad \text{resp.} \qquad
-  \sum_{k=-\infty}^{\infty}|h[k]| < \infty
-\]
-\end{infoBox}
-\end{tcolorbox}
-
-\vspace{0.5em}
-
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Systémová funkce – nuly a póly, stabilita}]
-
-\begin{matBox}[Systémová funkce]
-\[
-  H(s) = \LT\{h(t)\} \quad \text{(spojitý)} \qquad H(z) = \ZT\{h[k]\} \quad \text{(diskrétní)}
-\]
-\end{matBox}
-Racionální lomená funkce: $H(s) = \dfrac{B(s)}{A(s)}$
-\begin{itemize}[itemsep=2pt]
-  \item \textbf{Nuly}: kořeny čitatele $B(s)=0$ – kmitočty s nulovým přenosem.
-  \item \textbf{Póly}: kořeny jmenovatele $A(s)=0$ – charakteristické frekvence soustavy.
-\end{itemize}
-\begin{infoBox}[Stabilita z polohy pólů]
-Spojitá soustava: všechny póly v \textbf{levé polorovině} $(\operatorname{Re}(p_i) < 0)$.\\
-Diskrétní soustava: všechny póly \textbf{uvnitř jednotkové kružnice} $(|p_i| < 1)$.
-\end{infoBox}
-\end{tcolorbox}
-
-\vspace{0.5em}
-
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Frekvenční charakteristika LTI soustavy}]
-
-\begin{matBox}[]
-\[
-  H(\omega) = \FT\{h(t)\} = H(s)\big|_{s=j\omega} \quad \text{(spojitá)}
-  \qquad
-  H(e^{j\Omega}) = \text{DtFT}\{h[k]\} \quad \text{(diskrétní)}
-\]
-\end{matBox}
-\begin{itemize}[itemsep=2pt]
-  \item $|H(\omega)|$ – amplitudová charakteristika (jak soustava mění amplitudu).
-  \item $\arg H(\omega)$ – fázová charakteristika.
-  \item Pro reálnou $h(t)$: $|H(\omega)|$ je \textbf{sudá}, $\arg H(\omega)$ je \textbf{lichá}.
-  \item Frekvenční charakteristika diskrétní soustavy je \textbf{periodická} s periodou $2\pi$.
-  \item Odezva na $x(t)=A\cos(\omega_0 t)$: \quad $y(t) = A|H(\omega_0)|\cos(\omega_0 t + \arg H(\omega_0))$.
-\end{itemize}
-\end{tcolorbox}
+\QA{Jak určíme frekvenční charakteristiku (přenosovou funkci) LTI soustavy ze známé impulsové odezvy?}{%
+  Frekvenční charakteristika $H(\omega)$ se získá jako \textbf{Fourierova transformace impulsové odezvy}:
+  \begin{Vzorec}[Spojitá soustava]
+  \[
+    H(\omega) = \FT\{h(t)\} = \int_{-\infty}^{+\infty} h(t)\,e^{-j\omega t}\,\dd t = H(s)\big|_{s=j\omega}
+  \]
+  \end{Vzorec}
+  \begin{Vzorec}[Diskrétní soustava]
+  \[
+    H(e^{j\Omega}) = \mathrm{DtFT}\{h[k]\} = \sum_{k=-\infty}^{\infty} h[k]\,e^{-j\Omega k} = H(z)\big|_{z=e^{j\Omega}}
+  \]
+  \end{Vzorec}
+  Z frekvenční charakteristiky:
+  \begin{itemize}[itemsep=3pt]
+    \item $|H(\omega)|$ – \textbf{amplitudová charakteristika}: jak soustava mění amplitudu na kmitočtu $\omega$.
+    \item $\arg H(\omega)$ – \textbf{fázová charakteristika}: fázový posun výstupu vůči vstupu.
+    \item Pro reálnou $h(t)$: $|H(\omega)|$ je sudá, $\arg H(\omega)$ je lichá.
+    \item Frekvenční charakteristika diskrétní soustavy je periodická s periodou $2\pi$ (resp.\ $\omega_{sa}$).
+  \end{itemize}
+  \textbf{Odezva na harmonické buzení} $x(t) = A\cos(\omega_0 t + \varphi)$:
+  \[
+    y(t) = A\cdot|H(\omega_0)|\cdot\cos\!\bigl(\omega_0 t + \varphi + \arg H(\omega_0)\bigr)
+  \]
+  LTI soustava mění jen \textit{amplitudu a fázi}, kmitočet zůstává stejný.
+}
 
 \newpage
 % ============================================================
 \section{Pásmové signály, komplexní obálka, Hilbertova transformace}
 % ============================================================
 
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Reálný pásmový signál – vlastnosti spektra}]
+\QA{Jaké specifické vlastnosti má reálný pásmový signál BP, zejména s ohledem na jeho spektrum?}{%
+  \textbf{Pásmový signál} (Band-Pass, BP) má spektrum soustředěné \textbf{v okolí nosného kmitočtu $\omega_c$}:
+  \begin{itemize}[itemsep=4pt]
+    \item Spektrum je nenulové pouze v pásmech $[\omega_d, \omega_h]$ a $[-\omega_h, -\omega_d]$ (symetricky).
+    \item \textbf{Symetrické amplitudové spektrum}: $|S(\omega)| = |S(-\omega)|$ – důsledek toho, že signál je reálný.
+    \item Šířka pásma $B = \omega_h - \omega_d$; nosný kmitočet $\omega_c \approx (\omega_h+\omega_d)/2$.
+    \item Typicky: $\omega_c \gg B$ (nosný kmitočet je mnohem vyšší než šířka pásma).
+    \item Lze zapsat jako: $s(t) = V(t)\cos\!\bigl(\omega_c t + \Theta(t)\bigr)$, kde $V(t)$ je \textbf{obálka} a $\Theta(t)$ je \textbf{fáze}.
+  \end{itemize}
+  \begin{Poznamka}[Příklady BP signálů]
+    AM rádio (kolem 1 MHz), FM rádio (kolem 100 MHz), mobilní signály (GHz pásmo). Všechny mají $\omega_c \gg B$.
+  \end{Poznamka}
+}
 
-Pásmový signál (Band-Pass) má spektrum soustředěné \textbf{okolo nosného kmitočtu $\omega_c$}:
-\begin{itemize}[itemsep=2pt]
-  \item Spektrum nenulové pouze v $[\omega_d, \omega_h]$ a $[-\omega_h, -\omega_d]$.
-  \item \textbf{Symetrické} amplitudové spektrum: $|S(\omega)| = |S(-\omega)|$ (reálný signál).
-  \item Nosný kmitočet $\omega_c \gg$ šířka pásma $B$: $\omega_c \gg 2\pi B$.
-  \item Obecný zápis: $s(t) = V(t)\cos(\omega_c t + \Theta(t))$, kde $V(t)$ je obálka, $\Theta(t)$ fáze.
-\end{itemize}
-\end{tcolorbox}
+\QA{Popište ve spektrální oblasti přechod od reálného pásmového signálu přes analytický signál ke komplexní obálce CE.}{%
+  \textbf{Motivace}: reálný BP signál má symetrické spektrum – záporné frekvence jsou redundantní. Stačí popsat signál jedním postranním pásmem – zavádíme komplexní obálku.
 
-\vspace{0.5em}
+  \textbf{Krok 1 – Analytický signál} $z(t)$:
+  \begin{Vzorec}[]
+  \[
+    Z(\omega) = 2\cdot\mathbf{1}(\omega)\cdot S(\omega)
+    = \begin{cases} 2S(\omega) & \omega > 0 \\ S(0) & \omega = 0 \\ 0 & \omega < 0 \end{cases}
+  \]
+  \end{Vzorec}
+  Oříznutí záporných frekvencí a zdvojení kladných. V čase: $z(t) = s(t) + j\hat{s}(t)$, kde $\hat{s}(t)$ je Hilbertova transformace $s(t)$. Analytický signál je \textit{komplexní}.
 
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Přechod: pásmový signál $\to$ analytický signál $\to$ komplexní obálka}]
+  \textbf{Krok 2 – Komplexní obálka} $\tilde{s}(t)$:
+  \begin{Vzorec}[]
+  \[
+    \tilde{S}(\omega) = Z(\omega + \omega_c) \qquad \Leftrightarrow \qquad \tilde{s}(t) = z(t)\cdot e^{-j\omega_c t}
+  \]
+  \end{Vzorec}
+  Posunutí spektra analytického signálu \textbf{dolů o $\omega_c$} do základního pásma. CE je \textbf{nízkofrekvenční komplexní reprezentace} VF pásmového signálu.
 
-\begin{enumerate}[itemsep=6pt]
-  \item \textbf{Reálný pásmový signál} $s(t)$: symetrické spektrum $S(\omega)$.
-  \item \textbf{Analytický signál} $z(t)$: odstraníme záporné frekvence, kladné $\times 2$:
-    \[
-      Z(\omega) = 2\cdot\mathbf{1}(\omega)\cdot S(\omega), \qquad z(t) = s(t) + j\hat{s}(t)
-    \]
-    kde $\hat{s}(t)$ je Hilbertova transformace $s(t)$.
-  \item \textbf{Komplexní obálka} $\tilde{s}(t)$: posun spektra analytického signálu do nuly:
-    \begin{matBox}[]
-    \[
-      \tilde{S}(\omega) = Z(\omega + \omega_c) \qquad \Leftrightarrow \qquad \tilde{s}(t) = z(t)\cdot e^{-j\omega_c t}
-    \]
-    \end{matBox}
-\end{enumerate}
-Zpětný přechod: $s(t) = \operatorname{Re}\!\left\{\tilde{s}(t)\cdot e^{j\omega_c t}\right\}$\\[6pt]
-CE = \textbf{nízkofrekvenční komplexní reprezentace} VF pásmového signálu.\\
-Soufázová složka: $a(t) = \operatorname{Re}\{\tilde{s}(t)\}$, \quad Kvadraturní: $c(t) = \operatorname{Im}\{\tilde{s}(t)\}$.
-\end{tcolorbox}
+  \textbf{Zpětný přechod}:
+  \[
+    s(t) = \operatorname{Re}\!\bigl\{\tilde{s}(t)\cdot e^{j\omega_c t}\bigr\}
+  \]
+  Soufázová složka: $a(t) = \operatorname{Re}\{\tilde{s}\}$. \quad Kvadraturní složka: $c(t) = \operatorname{Im}\{\tilde{s}\}$.
+  \begin{Info}[Výhody CE oproti BP signálu]
+    Nižší vzorkovací kmitočet (signál je NF), jednodušší matematický popis, snadnější simulace a implementace algoritmů.
+  \end{Info}
+}
 
-\vspace{0.5em}
-
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Hilbertova transformace}]
-
-\begin{matBox}[Hilbertův transformátor – přenosová funkce a impulsová odezva]
-\[
-  H(\omega) = -j\cdot\operatorname{sgn}(\omega) = \begin{cases} -j & \omega > 0 \\ +j & \omega < 0 \end{cases}
-  \qquad
-  h(t) = \frac{1}{\pi t}
-\]
-\end{matBox}
-Základní vlastnosti:
-\begin{itemize}[itemsep=2pt]
-  \item \textbf{Lineární} LTI soustava (realizace přes konvoluci).
-  \item Na kladných kmitočtech: \textbf{fázové zpoždění o $\pi/2$}.
-  \item Amplitudová charakteristika \textbf{konstantní}: $|H(\omega)| = 1$ (nemění amplitudu).
-  \item Soustava je \textbf{nekauzální} ($h(t) \neq 0$ pro $t < 0$) a \textbf{nestabilní}.
-  \item Posouvá \textbf{všechny} frekvenční složky o $-\pi/2$.
-\end{itemize}
-Využití: výpočet analytického signálu $z(t) = s(t) + j\hat{s}(t)$, kde $\hat{s}(t) = \mathcal{H}\{s(t)\}$.
-\end{tcolorbox}
+\QA{Co je Hilbertova transformace, jaké má základní vlastnosti a jaký je její význam?}{%
+  \textbf{Hilbertova transformace} (HT) je LTI soustava, která všem frekvenčním složkám přidá fázový posun $-\pi/2$:
+  \begin{Vzorec}[Přenosová funkce Hilbertova transformátoru]
+  \[
+    H(\omega) = -j\cdot\operatorname{sgn}(\omega)
+    = \begin{cases} -j & \omega > 0 \\ 0 & \omega = 0 \\ +j & \omega < 0 \end{cases}
+  \]
+  \end{Vzorec}
+  \begin{Vzorec}[Impulsová odezva]
+  \[
+    h(t) = \frac{1}{\pi t}
+  \]
+  \end{Vzorec}
+  \textbf{Základní vlastnosti}:
+  \begin{itemize}[itemsep=3pt]
+    \item \textbf{Lineární} soustava (realizace konvolucí s $1/\pi t$).
+    \item \textbf{Amplitudová charakteristika konstantní}: $|H(\omega)| = 1$ – HT \textit{nemění amplitudy}.
+    \item Na kladných kmitočtech: \textbf{fázové zpoždění o $\pi/2$}.
+    \item Na záporných kmitočtech: fázový předstih o $\pi/2$.
+    \item Soustava je \textbf{nekauzální} ($h(t)\neq 0$ pro $t<0$) a \textbf{nestabilní} (není absolutně integrabilní).
+    \item $\hat{\hat{s}}(t) = -s(t)$ – dvojitá HT vrátí invertovaný signál.
+  \end{itemize}
+  \textbf{Využití}: výpočet analytického signálu $z(t) = s(t) + j\hat{s}(t)$, kde $\hat{s}(t) = \mathcal{H}\{s(t)\}$. To je základ přechodu k CE. Také se používá v detekci obálky, SSB modulaci a zpracování obrazu.
+}
 
 \newpage
 % ============================================================
 \section{Analogové modulace}
 % ============================================================
 
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Základní pojmy modulace}]
+\QA{Vysvětlete základní význam modulací v komunikačním systému. Co je nosná vlna, modulační signál a modulovaný signál?}{%
+  \textbf{Modulace} = ovlivnění parametrů nosné vlny modulačním signálem za účelem přenosu informace vhodnou formou:
+  \[
+    s(t) = V(t)\cdot\cos\!\bigl(\omega_c t + \Theta(t)\bigr)
+  \]
+  \begin{itemize}[itemsep=4pt]
+    \item \textbf{Nosná vlna} $s_c(t) = A_c\cos(\omega_c t)$: vysokofrekvenční harmonický signál, který \textit{vyhovuje přenosovému médiu} (RF vlna, optický paprsek). Samotná nosná nese nulovou informaci.
+    \item \textbf{Modulační signál} $s_M(t)$: nese informaci, kterou chceme přenést (hlas, data, video). Typicky nízkofrekvenční.
+    \item \textbf{Modulovaný signál} $s(t)$: výstup modulátoru. Přenáší informaci v podobě vhodné pro dané médium (frekvenční pásmo, výkon).
+  \end{itemize}
+  \textbf{Proč modulujeme?}
+  \begin{itemize}[itemsep=3pt]
+    \item Přizpůsobení kmitočtového pásma přenosovému médiu (anténa musí mít rozměr $\sim\lambda/4$).
+    \item Multiplexování více signálů do různých pásem (AM rádio, FM rádio, LTE).
+    \item Odolnost vůči rušení a šumu.
+  \end{itemize}
+  \begin{Info}[Dělení modulací]
+    \textbf{Amplitudové}: modulační signál ovlivňuje amplitudu $V(t)$, fáze $\Theta$ = konst.\\
+    \textbf{Úhlové}: modulační signál ovlivňuje fázi/kmitočet $\Theta(t)$, obálka $V$ = konst.
+  \end{Info}
+}
 
-\textbf{Modulace} = ovlivnění parametrů nosné vlny modulačním signálem:
-\[
-  s(t) = V(t)\cdot\cos\!\bigl(\omega_c t + \Theta(t)\bigr)
-\]
-\begin{itemize}[itemsep=3pt]
-  \item \textbf{Nosná vlna} $s_c(t) = A_c\cos(\omega_c t)$: VF harmonický signál vhodný pro přenosové médium (RF, optika).
-  \item \textbf{Modulační signál} $s_M(t)$: nese informaci (zvuk, data).
-  \item \textbf{Modulovaný signál} $s(t)$: výstup modulátoru, přenáší informaci vhodnou formou.
-\end{itemize}
-\begin{center}
-\renewcommand{\arraystretch}{1.3}
-\begin{tabular}{lll}
-\toprule
-\textbf{Skupina} & \textbf{Co se mění} & \textbf{Typ} \\
-\midrule
-Amplitudová & amplituda $V(t)$, $\Theta$ = konst. & AM-DSB, SSB, VSB \\
-Úhlová & fáze/kmitočet $\Theta(t)$, $V$ = konst. & PM, FM \\
-\bottomrule
-\end{tabular}
-\end{center}
-\end{tcolorbox}
+\QA{Vysvětlete základní princip amplitudové modulace AM s nosnou vlnou v časové a spektrální oblasti.}{%
+  \begin{Vzorec}[AM-DSB se zachovanou nosnou]
+  \[
+    s_{AM}(t) = A_c\bigl[1 + m\cdot s_M(t)\bigr]\cos(\omega_c t)
+  \]
+  kde $m$ je \textbf{modulační index} (hloubka modulace), $0 < m \leq 1$.
+  \end{Vzorec}
+  \textbf{Princip v časové oblasti}:
+  \begin{itemize}[itemsep=3pt]
+    \item Nosná vlna má vyšší kmitočet $\omega_c$.
+    \item Amplituda nosné (obálka) se mění podle tvaru modulačního signálu $s_M(t)$.
+    \item Modulovaný signál = nosná vlna s obálkou ve tvaru $s_M(t)$.
+  \end{itemize}
+  \textbf{Princip ve spektrální oblasti}:
+  \begin{itemize}[itemsep=3pt]
+    \item Spektrum $s_M(\omega)$ se posune do nosného kmitočtu $\omega_c$ (a $-\omega_c$) a zmenší na $mA_c/2$.
+    \item Ve spektru jsou: \textbf{nosná složka} (Diraci na $\pm\omega_c$) + \textbf{horní postranní pásmo (USB)} + \textbf{dolní postranní pásmo (LSB)}.
+    \item Obě postranní pásma nesou \textit{stejnou} informaci – plýtvání spektrem.
+  \end{itemize}
+  \textbf{Nevýhody AM-DSB}:
+  \begin{itemize}[itemsep=2pt]
+    \item Nízká energetická účinnost (většina výkonu v nosné vlně).
+    \item Spektrální neefektivita (USB i LSB nesou totéž).
+  \end{itemize}
+  \textbf{Varianty}: AM-DSB-SC (potlačená nosná) $\to$ AM-SSB (jedno postranní pásmo) $\to$ AM-VSB (vestigiální, TV).
+}
 
-\vspace{0.5em}
+\QA{Vysvětlete základní princip úhlových modulací FM a PM. Jaký je vztah těchto modulací?}{%
+  U \textbf{úhlových modulací} je obálka konstantní $V(t) = A_c$, mění se \textbf{fáze nebo okamžitý kmitočet}:
 
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Amplitudová modulace AM}]
+  \begin{Vzorec}[Fázová modulace PM (Phase Modulation)]
+  \[
+    s_{PM}(t) = A_c\cos\!\bigl(\omega_c t + k_P\cdot s_M(t)\bigr)
+  \]
+  $k_P$ – citlivost fázového modulátoru [rad / jednotka $s_M$].
+  \end{Vzorec}
 
-\begin{matBox}[AM-DSB se zachovanou nosnou]
-\[
-  s_{AM}(t) = A_c\bigl[1 + m\cdot s_M(t)\bigr]\cos(\omega_c t)
-\]
-Spektrum: $S_{AM}(\omega) = \pi A_c[\delta(\omega-\omega_c)+\delta(\omega+\omega_c)] + \frac{mA_c}{2}[S_M(\omega-\omega_c)+S_M(\omega+\omega_c)]$
-\end{matBox}
-\textbf{Princip v čase}: obálka nosné vlny kopíruje tvar $s_M(t)$.\\
-\textbf{Princip ve spektru}: spektrum $s_M$ se přesune do $\pm\omega_c$ (USB + LSB + nosná).\\[4pt]
-\textbf{Nevýhody AM-DSB}: obě postranní pásma nesou stejnou informaci (plýtvání spektrem), většina výkonu v nosné (nízká účinnost).\\[4pt]
-\textbf{Varianty}: AM-DSB-SC (bez nosné, lepší účinnost) $\to$ AM-SSB (jedno pásmo, max.\ efektivita) $\to$ AM-VSB (kompromis, TV).
-\end{tcolorbox}
+  \begin{Vzorec}[Kmitočtová modulace FM (Frequency Modulation)]
+  \[
+    s_{FM}(t) = A_c\cos\!\left(\omega_c t + k_F\int_{-\infty}^{t} s_M(\tau)\,\dd\tau\right)
+  \]
+  $k_F$ – citlivost kmitočtového modulátoru [rad/s / jednotka $s_M$].
+  \end{Vzorec}
 
-\vspace{0.5em}
+  \textbf{Vztah FM a PM}: okamžitý kmitočet je derivací fáze:
+  \[
+    \omega_i(t) = \frac{\dd\Phi(t)}{\dd t} = \omega_c + k_F\cdot s_M(t) \quad \text{(FM)}
+    \qquad
+    \omega_i(t) = \omega_c + k_P\cdot\dot{s}_M(t) \quad \text{(PM)}
+  \]
+  FM s \textit{integrovaným} modulačním signálem = PM. PM s \textit{derivovaným} vstupem = FM. Proto jsou \textbf{vzájemně zaměnitelné} s vhodným předzpracováním.
 
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Úhlové modulace – FM a PM}]
-
-Obálka $V(t) = A_c = \text{konst.}$, mění se \textbf{fáze nebo kmitočet}.
-
-\begin{matBox}[Fázová modulace PM]
-\[
-  s_{PM}(t) = A_c\cos\!\bigl(\omega_c t + k_P\cdot s_M(t)\bigr)
-\]
-\end{matBox}
-
-\begin{matBox}[Kmitočtová modulace FM]
-\[
-  s_{FM}(t) = A_c\cos\!\left(\omega_c t + k_F\int_{-\infty}^{t} s_M(\tau)\,\dd\tau\right)
-\]
-\end{matBox}
-
-\textbf{Vztah FM a PM}: okamžitý kmitočet je derivací fáze:
-\[
-  \omega_i(t) = \omega_c + k_F s_M(t) \;\text{ (FM)}, \qquad \omega_i(t) = \omega_c + k_P\dot{s}_M(t) \;\text{ (PM)}
-\]
-FM s integrovaným vstupem = PM $\Rightarrow$ \textbf{vzájemně zaměnitelné} s vhodným předzpracováním.\\[4pt]
-\textbf{Výhody}: konstantní obálka (energeticky výhodná, nelineární zesilovače), lepší odolnost vůči šumu než AM.
-\end{tcolorbox}
+  \textbf{Výhody úhlových modulací}:
+  \begin{itemize}[itemsep=3pt]
+    \item Konstantní obálka – lze použít nelineární zesilovače třídy C (vysoká účinnost).
+    \item Lepší odolnost vůči šumu oproti AM.
+    \item Využití: FM rádio (88–108 MHz), přenos zvuku ve videu, GSM, navigace.
+  \end{itemize}
+}
 
 \newpage
 % ============================================================
 \section{Náhodné procesy, stacionarita, ergodicita, bílý šum}
 % ============================================================
 
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Náhodný signál (náhodný proces)}]
+\QA{Co je náhodný signál (náhodný proces) a jaký je jeho vztah k náhodnému jevu a náhodné veličině?}{%
+  \textbf{Náhodný proces} $\xi(t, \zeta)$ je parametrizovaný soubor funkcí, kde $\zeta\in\Omega$ je náhodný jev z pravděpodobnostního prostoru $(\Omega, \mathcal{F}, P)$:
+  \begin{itemize}[itemsep=4pt]
+    \item Pro fixní $\zeta = \zeta_i$: $\xi(t, \zeta_i)$ je jedna \textbf{realizace} – deterministický signál (možný průběh signálu).
+    \item Pro fixní $t = t_0$: $\xi(t_0, \zeta)$ je \textbf{náhodná veličina} – hodnota procesu v čase $t_0$ je náhodná.
+    \item Náhodné signály mají náhodný (nikoli chaotický) průběh – popisujeme je \textit{pravděpodobnostně}.
+    \item Obsahují \textbf{neznámou informaci} nebo jsou výsledkem neznámých vlivů (šum, tepelný pohyb, atmosférická turbulence).
+  \end{itemize}
+  \textbf{Vztah k pojmům}:
+  \begin{itemize}[itemsep=3pt]
+    \item \textbf{Náhodný jev} $\zeta$: parametrizuje realizaci (např.\ „$i$-tý experiment").
+    \item \textbf{Náhodná veličina}: hodnota procesu v daném čase.
+    \item \textbf{Realizace}: konkrétní průběh pro dané $\zeta_i$ – deterministická funkce.
+  \end{itemize}
+  \begin{Poznamka}[Příklady]
+    Tepelný šum v rezistoru, atmosférický šum, mluvený hlas, burzovní data, výsledky měření.
+  \end{Poznamka}
+}
 
-\textbf{Náhodný proces} $\xi(t, \zeta)$ – parametrizovaný soubor náhodných jevů $\zeta \in \Omega$:
-\begin{itemize}[itemsep=2pt]
-  \item Pro fixní $\zeta_i$: $\xi(t, \zeta_i)$ je jedna \textbf{realizace} – deterministický signál.
-  \item Pro fixní $t_0$: $\xi(t_0, \zeta)$ je \textbf{náhodná veličina}.
-  \item Obsahují \textbf{neznámou informaci} nebo šum.
-  \item Popisujeme pravděpodobnostními charakteristikami (PDF, CDF, střední hodnota, ACF).
-\end{itemize}
-Vztah k náhodné veličině: v každém čase $t$ je hodnota procesu náhodnou veličinou s vlastní PDF.
-\end{tcolorbox}
+\QA{Čím se vyznačují stacionární náhodné signály?}{%
+  \textbf{Stacionární} náhodný proces = jeho \textbf{pravděpodobnostní charakteristiky nezávisí na volbě počátku časové osy} – statistické vlastnosti jsou časově neměnné.
 
-\vspace{0.5em}
+  \begin{Info}[SSS – Stacionarita v užším smyslu (Strict Sense Stationary)]
+    \textbf{Kompletní} statistický popis (hustota $n$-tého řádu) je invariantní vůči libovolnému časovému posunu:
+    \[
+      f_\xi(x_1,\ldots,x_n;\, t_1,\ldots,t_n) = f_\xi(x_1,\ldots,x_n;\, t_1+\Delta,\ldots,t_n+\Delta)
+    \]
+  \end{Info}
 
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Stacionární náhodné signály}]
+  \begin{Info}[WSS – Stacionarita v širším smyslu (Wide Sense Stationary)]
+    Jen \textbf{vybrané charakteristiky} jsou invariantní:
+    \[
+      \mu = E[\xi(t)] = \text{konst.}
+      \qquad
+      R_\xi(t_1, t_2) = R_\xi(\tau), \quad \tau = t_2 - t_1
+    \]
+    Střední hodnota je konstantní a ACF závisí jen na rozdílu časů $\tau$.
+  \end{Info}
 
-\textbf{Stacionární} = pravděpodobnostní popis \textbf{nezávisí na volbě počátku časové osy}.
+  Platí: SSS $\Rightarrow$ WSS, ale WSS $\not\Rightarrow$ SSS.
 
-\begin{infoBox}[SSS – Stacionarita v užším smyslu (Strict Sense Stationary)]
-Kompletní PDF $n$-tého řádu invariantní vůči časovému posunu. Nejsilnější podmínka.
-\end{infoBox}
+  \textbf{Praktický dopad}: pro WSS procesy platí \textbf{Wiener-Chinčinova věta} – spektrální hustota výkonu $S_\xi(\omega)$ je FT autokorelační funkce:
+  \[
+    S_\xi(\omega) = \FT\{R_\xi(\tau)\}
+  \]
+}
 
-\begin{infoBox}[WSS – Stacionarita v širším smyslu (Wide Sense Stationary)]
-\[
-  \mu = E[\xi(t)] = \text{konst.}
-  \qquad
-  R_\xi(t_1,t_2) = R_\xi(\tau), \quad \tau = t_2 - t_1
-\]
-Jen střední hodnota a ACF jsou časově invariantní. SSS $\Rightarrow$ WSS, ale WSS $\not\Rightarrow$ SSS.
-\end{infoBox}
-\end{tcolorbox}
+\QA{Jaké vlastnosti má bílý šum, zejména s ohledem na spektrální hustotu výkonu a autokorelační funkci?}{%
+  \textbf{Bílý šum} (White Noise, WN) je idealizovaný model náhodného signálu s \textbf{konstantní spektrální hustotou výkonu}:
+  \begin{Vzorec}[Bílý šum]
+  \[
+    S_\xi(\omega) = S_0 = \text{konst.} \quad \forall\,\omega
+  \]
+  \[
+    R_\xi(\tau) = \FT^{-1}\{S_0\} = S_0\,\delta(\tau)
+  \]
+  \end{Vzorec}
+  \textbf{Vlastnosti}:
+  \begin{itemize}[itemsep=4pt]
+    \item \textbf{Konstantní spektrum}: všechny frekvence zastoupeny stejnou měrou (analogie bílého světla).
+    \item \textbf{ACF = Diracův impuls v $\tau=0$}: hodnoty procesu v různých časech jsou \textit{nekorelované} – žádná „paměť".
+    \item \textbf{Nekonečný výkon}: $P = \int_{-\infty}^{\infty} S_0\,\dd\omega = \infty$ – fyzikálně nerealizovatelný, jde o matematický ideál.
+    \item \textbf{Nulová střední hodnota}: $E[\xi(t)] = 0$.
+  \end{itemize}
+  \begin{Info}[AWGN – Additive White Gaussian Noise]
+    Model šumu v komunikačních systémech:
+    \begin{itemize}[itemsep=2pt]
+      \item \textbf{Aditivní}: $r(t) = s(t) + n(t)$ – šum se přičítá k signálu.
+      \item \textbf{Bílý}: $S_n(\omega) = N_0/2$ (konstantní jednostranná hustota výkonu).
+      \item \textbf{Gaussovský}: PDF hodnot je normální rozdělení:
+        $f_n(x) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp\!\left(-\frac{x^2}{2\sigma^2}\right)$
+      \item Nekorelovaný – vzorky v různých časech jsou statisticky \textit{nezávislé}.
+    \end{itemize}
+  \end{Info}
+}
 
-\vspace{0.5em}
-
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Bílý šum (White Noise)}]
-
-\begin{matBox}[Definice bílého šumu]
-\[
-  S_\xi(\omega) = S_0 = \text{konst.} \quad \forall\,\omega
-  \qquad
-  R_\xi(\tau) = S_0\,\delta(\tau)
-\]
-\end{matBox}
-Vlastnosti:
-\begin{itemize}[itemsep=2pt]
-  \item \textbf{Konstantní} spektrální hustota výkonu – všechny frekvence zastoupeny stejně.
-  \item ACF = Diracův impuls v $\tau=0$: hodnoty v různých časech jsou \textbf{nekorelované}.
-  \item \textbf{Nekonečný výkon} ($\int S_\xi\,\dd\omega = \infty$) – fyzikálně nerealizovatelný, idealizovaný model.
-  \item \textbf{Nulová střední hodnota}.
-\end{itemize}
-\begin{infoBox}[AWGN (Additive White Gaussian Noise)]
-Model šumu v komunikačních systémech: aditivní + bílý (konst.\ $N_0/2$) + Gaussovský:
-\[
-  f_\xi(x) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp\!\left(-\frac{x^2}{2\sigma^2}\right)
-\]
-Nekorelovaný, vzorky statisticky nezávislé.
-\end{infoBox}
-\end{tcolorbox}
-
-\vspace{0.5em}
-
-% -----------------------------------------------------------
-\begin{tcolorbox}[breakable,colback=pozadihv,colframe=hvezdicka,
-  title={\bfseries\color{white}$\bigstar$ Ergodické náhodné signály}]
-
-\textbf{Ergodické signály} – časové charakteristiky (průměr po jedné realizaci v čase) jsou \textbf{rovny charakteristikám na množině realizací}:
-\begin{matBox}[]
-\[
-  \mu = \lim_{T\to\infty}\frac{1}{2T}\int_{-T}^{T}\xi(t,\zeta_i)\,\dd t \qquad \text{(pro skoro všechna }\zeta_i)
-\]
-\end{matBox}
-Klíčové vlastnosti:
-\begin{itemize}[itemsep=2pt]
-  \item Časová charakteristika je \textbf{determinovaná} (nulový rozptyl mezi realizacemi).
-  \item \textbf{Nepotřebujeme průměrovat přes množinu realizací} – stačí jedna dlouhá realizace.
-  \item Praktický dopad: statistiky signálu lze změřit z jediného záznamu.
-\end{itemize}
-\end{tcolorbox}
+\QA{Co jsou ergodické náhodné signály?}{%
+  \textbf{Ergodické signály} – třída WSS náhodných signálů, pro které je \textbf{časové průměrování po jedné realizaci} ekvivalentní \textbf{průměrování přes množinu realizací} (ensemble averaging) v daném čase:
+  \begin{Vzorec}[Ergodická střední hodnota]
+  \[
+    \mu = E[\xi(t)] = \lim_{T\to\infty}\frac{1}{2T}\int_{-T}^{T}\xi(t,\zeta_i)\,\dd t
+    \quad \text{pro (skoro) všechna } \zeta_i
+  \]
+  \end{Vzorec}
+  \begin{Vzorec}[Ergodická ACF]
+  \[
+    R_\xi(\tau) = \lim_{T\to\infty}\frac{1}{2T}\int_{-T}^{T}\xi(t+\tau,\zeta_i)\,\xi(t,\zeta_i)\,\dd t
+  \]
+  \end{Vzorec}
+  \textbf{Klíčové vlastnosti}:
+  \begin{itemize}[itemsep=4pt]
+    \item Časová charakteristika jedné realizace je \textbf{determinovaná} (nulový rozptyl mezi realizacemi).
+    \item \textbf{Nepotřebujeme průměrovat přes množinu realizací} – stačí jedna \textit{dostatečně dlouhá} realizace.
+    \item Praktický dopad: statistiky signálu lze změřit z \textit{jediného záznamu} (jediného experimentu) $\Rightarrow$ zásadní pro praxi.
+  \end{itemize}
+  \begin{Poznamka}[Příklad neergo\-dického procesu]
+    Náhodný proces, kde každá realizace má jinou konstantní amplitudu (náhodnou veličinou je jen amplituda). Průměr v čase $\neq$ průměr přes realizace.
+  \end{Poznamka}
+}
 
 \newpage
 % ============================================================
-\section*{Rychlý přehled – všechny $\bigstar$ otázky}
-\addcontentsline{toc}{section}{Rychlý přehled – seznam klíčových otázek}
+\section*{Rychlý přehled – všechny klíčové otázky}
+\addcontentsline{toc}{section}{Rychlý přehled – seznam}
 % ============================================================
-
-\begin{tcolorbox}[breakable,colback=pozadiinfo,colframe=hlavicka]
-\begin{enumerate}[leftmargin=1.5em,itemsep=3pt]
-  \item[\textbf{1.}] Co je to signál?
-  \item[\textbf{2.}] Jak vypadá signál ve spojitém a diskrétním čase?
-  \item[\textbf{3.}] Vlastnosti: jednotkový skok, obdélníkový impuls, jednotkový impuls, Diracův impuls, vzorkovací funkce.
-  \item[\textbf{4.}] Co popisují a jak se počítají vzájemná korelační funkce a autokorelační funkce?
-  \item[\textbf{5.}] Co znamená, když jsou dva signály vzájemně ortogonální?
-  \item[\textbf{6.}] Vysvětlete princip rozkladu periodického signálu do Fourierovy řady.
-  \item[\textbf{7.}] Popište aplikaci Fourierovy transformace (FT) k výpočtu spektra obecných signálů.
-  \item[\textbf{8.}] Jak vypadá spektrum FT pro Diracův impuls, konstantní signál, sinc, obdélník, harmonický signál?
-  \item[\textbf{9.}] Jakou základní vlastnost má spektrum DtFT diskrétních signálů?
-  \item[\textbf{10.}] Vysvětlete větu o Fourierově transformaci konvoluce dvou signálů.
-  \item[\textbf{11.}] Vysvětlete Shannonův vzorkovací teorém (ve spektrální oblasti).
-  \item[\textbf{12.}] Vysvětlete proces ideální interpolace vzorkovaného signálu.
-  \item[\textbf{13.}] Co je to soustava a operátor soustavy?
-  \item[\textbf{14.}] Vysvětlete LTI soustavy (linearita + časová invariance).
-  \item[\textbf{15.}] Co je impulsová odezva spojité a diskrétní LTI soustavy?
-  \item[\textbf{16.}] Vysvětlete princip a výpočet spojité a diskrétní konvoluce.
-  \item[\textbf{17.}] Jak poznáme z impulsové odezvy kauzalitu a stabilitu soustavy?
-  \item[\textbf{18.}] Co je systémová funkce LTI soustavy a jaký je vztah k impulsové odezvě?
-  \item[\textbf{19.}] Co jsou nuly a póly systémové funkce a jak z pólů poznáme stabilitu?
-  \item[\textbf{20.}] Jak určíme frekvenční charakteristiku LTI soustavy ze známé impulsové odezvy?
-  \item[\textbf{21.}] Jaké vlastnosti má reálný pásmový signál BP (spektrum)?
-  \item[\textbf{22.}] Přechod: pásmový signál $\to$ analytický signál $\to$ komplexní obálka CE.
-  \item[\textbf{23.}] Co je Hilbertova transformace, vlastnosti, využití.
-  \item[\textbf{24.}] Základní princip AM (čas + spektrum).
-  \item[\textbf{25.}] Základní princip FM a PM, vztah obou modulací.
-  \item[\textbf{26.}] Co je náhodný signál (proces), vztah k náhodné veličině.
-  \item[\textbf{27.}] Čím se vyznačují stacionární náhodné signály (SSS, WSS)?
-  \item[\textbf{28.}] Vlastnosti bílého šumu (spektrální hustota výkonu, ACF).
-  \item[\textbf{29.}] Co jsou ergodické náhodné signály?
+\begin{tcolorbox}[colback=cervena!8,colframe=cervena,
+    title={\bfseries\color{white} Seznam všech $\bigstar$ otázek (29)},
+    fonttitle=\large]
+\begin{enumerate}[itemsep=4pt]
+  \item Co je to signál?
+  \item Jak vypadá signál ve spojitém a diskrétním čase?
+  \item Vlastnosti: jednotkový skok, obdélníkový impuls, jednotkový impuls, Diracův impuls, vzorkovací funkce.
+  \item Co popisují a jak se počítají vzájemná korelační funkce a autokorelační funkce?
+  \item Co znamená, když jsou dva signály vzájemně ortogonální?
+  \item Princip rozkladu periodického signálu do Fourierovy řady.
+  \item Aplikace Fourierovy transformace (FT) k výpočtu spektra.
+  \item Spektra základních signálů (Dirac, konstanta, sinc, rect, harmonický).
+  \item Jakou základní vlastnost má spektrum DtFT diskrétních signálů?
+  \item Věta o FT konvoluce dvou signálů.
+  \item Shannonův vzorkovací teorém – odvození ve spektrální oblasti.
+  \item Proces ideální interpolace vzorkovaného signálu.
+  \item Co je soustava a operátor soustavy?
+  \item Lineární a časově invariantní soustavy LTI.
+  \item Impulsová odezva spojité a diskrétní LTI soustavy.
+  \item Princip a výpočet spojité a diskrétní konvoluce.
+  \item Jak poznáme z impulsové odezvy kauzalitu a stabilitu?
+  \item Systémová funkce LTI soustavy a vztah k impulsové odezvě.
+  \item Nuly a póly systémové funkce; stabilita z polohy pólů.
+  \item Frekvenční charakteristika LTI soustavy ze známé impulsové odezvy.
+  \item Vlastnosti reálného pásmového signálu BP (spektrum).
+  \item Přechod: pásmový signál $\to$ analytický signál $\to$ komplexní obálka CE.
+  \item Hilbertova transformace – vlastnosti a využití.
+  \item Základní princip amplitudové modulace AM (čas + spektrum).
+  \item Princip FM a PM; vztah obou modulací.
+  \item Náhodný signál (náhodný proces), vztah k náhodné veličině.
+  \item Stacionární náhodné signály (SSS, WSS).
+  \item Vlastnosti bílého šumu (spektrum, ACF, AWGN).
+  \item Ergodické náhodné signály.
 \end{enumerate}
 \end{tcolorbox}
 
