@@ -971,4 +971,95 @@
 \end{enumerate}
 \end{tcolorbox}
 
+\bigskip
+\begin{tcolorbox}[colback=tmavemodr!5,colframe=tmavemodr!60,
+    title={\bfseries\color{white} Kompletní seznam všech otázek ke zkoušce},
+    fonttitle=\large, breakable]
+
+\textbf{\color{tmavemodr}Téma 1 – Klasifikace signálů, speciální signály}
+\begin{enumerate}[itemsep=2pt, label=\arabic*.]
+  \item Co je to signál? $\bigstar$
+  \item Jak vypadá signál ve spojitém a diskrétním čase? $\bigstar$
+  \item Jak se liší deterministické a náhodné (stochastické) signály?
+  \item Co to jsou kauzální a finitní signály?
+  \item Jaké jsou vlastnosti a vzorce pro: jednotkový skok $1(t)$/$u[k]$, obdélníkový impuls $\rect(t)$, jednotkový impuls $\delta[k]$, Diracův impuls $\delta(t)$, vzorkovací funkce $\mathrm{Sa}$/$\mathrm{sinc}$? $\bigstar$
+  \item Jaké jsou vlastnosti harmonických signálů (energie, výkon, ortogonalita)?
+\end{enumerate}
+
+\medskip
+\textbf{\color{tmavemodr}Téma 2 – Spektrální reprezentace, korelace, teorémy}
+\begin{enumerate}[resume, itemsep=2pt, label=\arabic*.]
+  \item Jak se definuje a počítá energie a výkon signálu?
+  \item Co je operátor $\Av$ a co je stejnosměrná složka signálu?
+  \item Co popisují a jak se počítají vzájemná korelační funkce a autokorelační funkce? $\bigstar$
+  \item Co znamená, že jsou dva signály vzájemně ortogonální? $\bigstar$
+  \item Vysvětlete princip rozkladu periodického signálu do Fourierovy řady (FS). $\bigstar$
+  \item Popište Fourierovu transformaci (FT) k výpočtu spektra obecných signálů. $\bigstar$
+  \item Jak vypadají spektra základních signálů (Dirac, konstanta, sinc, rect, harmonický)? $\bigstar$
+  \item Jakou základní vlastnost má spektrum DtFT diskrétních signálů? $\bigstar$
+  \item Vysvětlete větu o FT konvoluce dvou signálů. $\bigstar$
+  \item Popište přehled Fourierovských transformací (FS, DFS, FT, DtFT, DFT) – typy signálů a spekter.
+  \item Co je DFT a FFT? Jaký je mezi nimi vztah?
+\end{enumerate}
+
+\medskip
+\textbf{\color{tmavemodr}Téma 3 – Vzorkování a interpolace}
+\begin{enumerate}[resume, itemsep=2pt, label=\arabic*.]
+  \item Vysvětlete Shannonův vzorkovací teorém ve spektrální oblasti. $\bigstar$
+  \item Vysvětlete proces ideální interpolace vzorkovaného signálu. $\bigstar$
+  \item Jaké jsou problémy realizace ideálního interpolátoru?
+  \item Co je vzorkování pásmových signálů (BP sampling) a jaká je podmínka?
+\end{enumerate}
+
+\medskip
+\textbf{\color{tmavemodr}Téma 4 – LTI soustavy, konvoluce, stabilita}
+\begin{enumerate}[resume, itemsep=2pt, label=\arabic*.]
+  \item Co je soustava a operátor soustavy? $\bigstar$
+  \item Jak se klasifikují soustavy (lineární, kauzální, stabilní, paměťové, ...)?
+  \item Co je BIBO stabilita?
+  \item Vysvětlete vlastnosti a využití LTI soustav. $\bigstar$
+  \item Co je impulsová odezva spojité a diskrétní LTI soustavy? $\bigstar$
+  \item Vysvětlete princip a výpočet spojité a diskrétní konvoluce. $\bigstar$
+  \item Jak poznáme z impulsové odezvy kauzalitu a stabilitu soustavy? $\bigstar$
+  \item Co je systémová funkce LTI soustavy a jaký je vztah k impulsové odezvě? $\bigstar$
+  \item Co jsou nuly a póly systémové funkce? Jak z pólů poznáme stabilitu? $\bigstar$
+  \item Jak určíme frekvenční charakteristiku LTI soustavy ze známé impulsové odezvy? $\bigstar$
+\end{enumerate}
+
+\medskip
+\textbf{\color{tmavemodr}Téma 5 – Pásmové signály, analytický signál, komplexní obálka}
+\begin{enumerate}[resume, itemsep=2pt, label=\arabic*.]
+  \item Jaké specifické vlastnosti má reálný pásmový signál BP (spektrum)? $\bigstar$
+  \item Popište přechod: BP signál $\to$ analytický signál $\to$ komplexní obálka CE. $\bigstar$
+  \item Jak se reprezentuje komplexní obálka (polární forma, okamžitá amplituda, fáze, kmitočet)?
+  \item Co je Hilbertova transformace a jaké má vlastnosti? $\bigstar$
+  \item Jaké jsou metody přechodu BP $\leftrightarrow$ CE (demodulace / modulace)?
+  \item Co je vzorkování pásmových signálů?
+\end{enumerate}
+
+\medskip
+\textbf{\color{tmavemodr}Téma 6 – Modulace}
+\begin{enumerate}[resume, itemsep=2pt, label=\arabic*.]
+  \item Vysvětlete základní pojmy modulace (nosná vlna, modulační signál, modulovaný signál). $\bigstar$
+  \item Vysvětlete amplitudovou modulaci AM v časové a spektrální oblasti. $\bigstar$
+  \item Co jsou AM-DSB, AM-SC, AM-SSB, AM-VSB? Jaké jsou rozdíly?
+  \item Vysvětlete princip FM a PM. Jaký je vztah obou modulací? $\bigstar$
+  \item Co je spektrum FM při harmonickém modulačním signálu (Besselovy funkce, Carsonovo pravidlo)?
+  \item Co jsou pulzní modulace (PAM, PWM, PCM)?
+\end{enumerate}
+
+\medskip
+\textbf{\color{tmavemodr}Téma 7 – Náhodné signály}
+\begin{enumerate}[resume, itemsep=2pt, label=\arabic*.]
+  \item Co je náhodný signál (náhodný proces)? Vztah k náhodné veličině. $\bigstar$
+  \item Co jsou pravděpodobnostní charakteristiky (PDF, CDF, střední hodnota, rozptyl)?
+  \item Čím se vyznačují stacionární náhodné signály (SSS, WSS)? $\bigstar$
+  \item Co říká Wiener-Chinčinova věta o vztahu ACF a spektrální hustoty výkonu?
+  \item Jaké vlastnosti má bílý šum? (spektrum, ACF, AWGN) $\bigstar$
+  \item Co jsou ergodické náhodné signály? $\bigstar$
+  \item Jak se zjednodušují výpočty pro stacionární a ergodické signály?
+\end{enumerate}
+
+\end{tcolorbox}
+
 \end{document}
